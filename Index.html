@@ -1,11 +1,918 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=H, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ingeniería de Sistemas | Universidad de la Amazonia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/Styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Ingenieria de sistemas</h1>
+
+    <!-- MENÚ: navbar-expand-lg = se muestra completo en pantallas grandes
+       y se esconde tras un botón en celulares. sticky-top = queda fijo arriba -->
+    <nav class="navbar navbar-expand-lg sticky-top menu">
+        <div class="container">
+
+            <!-- Logo y nombre -->
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                    <img src="Img/Logo_Uniamazonia-removebg-preview.png" alt="Logo Universidad de la Amazonia"
+                        class="logo">
+                    <span>Universidad de la Amazonia</span>
+                </a>
+
+                <!-- Botón de hamburguesa (solo se ve en celular).
+           data-bs-target="#opciones" apunta al id de la lista de abajo -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones"
+                    aria-controls="opciones" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Lista de enlaces: este es el bloque que se esconde y se muestra -->
+                <div class="collapse navbar-collapse" id="opciones">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#presentacion">Presentación</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#plan">Plan de estudios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#admisiones">Admisiones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+        </div>
+    </nav>
+
+    <!-- Portada provisional para ver el menú en acción -->
+    <!-- PORTADA -->
+    <header id="inicio">
+        <h1 class="visually-hidden">Ingeniería de Sistemas</h1>
+        <img src="./Img/portada_v2.png" alt="Programa Ingeniería de Sistemas, Universidad de la Amazonia"
+            class="portada-img">
+    </header>
+    <!-- PRESENTACIÓN -->
+    <section class="seccion" id="presentacion">
+        <div class="container">
+            <div class="row g-5">
+
+                <div class="col-lg-6">
+                    <h2 class="titulo-seccion">Presentación</h2>
+                    <p class="texto">El Programa Ingeniería de Sistemas de la Universidad de la Amazonia, tiene como
+                        principal propósito, desarrollar procesos de formación integral de profesionales de la
+                        Ingeniería de Sistemas, mediante el desarrollo de un currículo que aborda los conocimientos
+                        propios de las ciencias básicas, la ingeniería, el campo tecnológico, investigativo,
+                        socio-humanista y de formación complementaria, que le permitirá ser capaz de interactuar con su
+                        entorno e incidir positivamente en él, mediante la creación, innovación y aplicación de
+                        soluciones computacionales soportadas en las Tecnologías de la Información y la Comunicación,
+                        que contribuyan al fortalecimiento y progreso económico, social, tecnológico y sustentable de la
+                        región Amazónica y el país.</p>
+                    <p class="texto">Trabajarás en laboratorios y proyectos desde los primeros semestres, con problemas
+                        del territorio: agroindustria, ambiente, salud y servicios públicos.</p>
+                    <div class="mv">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" type="button" role="tab" data-bs-toggle="tab"
+                                    data-bs-target="#mision" aria-controls="mision" aria-selected="true">Misión</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" type="button" role="tab" data-bs-toggle="tab"
+                                    data-bs-target="#vision" aria-controls="vision"
+                                    aria-selected="false">Visión</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content mv-contenido">
+                            <div class="tab-pane fade show active" id="mision" role="tabpanel">
+                                <p>El programa académico Ingeniería de Sistemas de la Universidad de la Amazonia, asume
+                                    como encargo social la formación de profesionales íntegros, con capacidad para
+                                    crear, innovar, formular y solucionar problemáticas organizacionales y productivas,
+                                    apoyados en el desarrollo de sistemas de información soportados en las diferentes
+                                    tecnologías informáticas, con el propósito de contribuir al desarrollo social,
+                                    económico y tecnológico de la región amazónica y del país. </p>
+                            </div>
+                            <div class="tab-pane fade" id="vision" role="tabpanel">
+                                <p>Ingeniería de Sistemas será un programa académico en permanente acreditación
+                                    académica y social, líder en la formación integral de profesionales, competentes en
+                                    el campo académico, investigativo y humanístico; comprometidos con el desarrollo
+                                    tecnológico de la región amazónica y del país apoyados en tecnologías de
+                                    información.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="datos">
+
+                        <li class="dato">
+                            <i class="bi bi-mortarboard icono"></i>
+                            <div>
+                                <strong>Ingeniero de sistemas</strong>
+                                <span>Título</span>
+                            </div>
+                        </li>
+
+                        <li class="dato">
+                            <i class="bi bi-calendar3 icono"></i>
+                            <div>
+                                <strong>Diez semestres</strong>
+                                <span>Duración</span>
+                            </div>
+                        </li>
+
+                        <li class="dato">
+                            <i class="bi bi-book icono"></i>
+                            <div>
+                                <strong>Presencial</strong>
+                                <span>Modalidad</span>
+                            </div>
+                        </li>
+
+                        <li class="dato">
+                            <i class="bi bi-sun icono"></i>
+                            <div>
+                                <strong>Diurna</strong>
+                                <span>Jornada</span>
+                            </div>
+                        </li>
+
+                        <li class="dato">
+                            <i class="bi bi-cash-coin icono"></i>
+                            <div>
+                                <strong>Costo</strong>
+                                <span>El costo por semestre depende de los ingresos del grupo familiar.</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <!-- ============================================================
+  1) CIFRAS
+============================================================ -->
+                <section class="cifras" id="cifras">
+                    <div class="container">
+                        <div class="row g-4 text-center">
+                            <div class="col-6 col-lg-3"><span class="cifra-num">10</span><span
+                                    class="cifra-txt">semestres</span>
+                            </div>
+                            <div class="col-6 col-lg-3"><span class="cifra-num">178</span><span
+                                    class="cifra-txt">créditos</span>
+                            </div>
+                            <div class="col-6 col-lg-3"><span class="cifra-num">51</span><span
+                                    class="cifra-txt">asignaturas</span>
+                            </div>
+                            <div class="col-6 col-lg-3"><span class="cifra-num">4</span><span class="cifra-txt">áreas de
+                                    formación</span></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- plan estudiantil -->
+    <!-- PLAN DE ESTUDIOS (pegar después de la sección "Por qué estudiar") -->
+    <section class="seccion plan" id="plan">
+        <div class="container">
+            <h2 class="titulo-seccion">Plan de estudios</h2>
+            <p class="texto mb-4">Pensum 2020: 10 semestres y 178 créditos. Abre cada semestre para ver sus asignaturas.
+            </p>
+
+            <div class="accordion" id="semestres">
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sem1"
+                            aria-expanded="true" aria-controls="sem1">
+                            Semestre I <span class="cantidad">18 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem1" class="accordion-collapse collapse show" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Matemáticas I <span class="cred">3 cr.</span></li>
+                                <li>Física I <span class="cred">3 cr.</span></li>
+                                <li>Biología general <span class="cred">3 cr.</span></li>
+                                <li>Introducción a la ingeniería <span class="cred">2 cr.</span></li>
+                                <li>Lógica y algoritmos I <span class="cred">3 cr.</span></li>
+                                <li>Comunicación <span class="cred">2 cr.</span></li>
+                                <li>Deportes y cultura <span class="cred">2 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem2" aria-expanded="false" aria-controls="sem2">
+                            Semestre II <span class="cantidad">17 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem2" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Matemáticas II <span class="cred">3 cr.</span></li>
+                                <li>Física II <span class="cred">3 cr.</span></li>
+                                <li>Química I <span class="cred">3 cr.</span></li>
+                                <li>Teoría general de sistemas <span class="cred">3 cr.</span></li>
+                                <li>Lógica y algoritmos II <span class="cred">3 cr.</span></li>
+                                <li>Constitución y democracia <span class="cred">2 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem3" aria-expanded="false" aria-controls="sem3">
+                            Semestre III <span class="cantidad">17 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem3" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Álgebra lineal <span class="cred">3 cr.</span></li>
+                                <li>Matemáticas discretas <span class="cred">4 cr.</span></li>
+                                <li>Análisis de sistemas <span class="cred">4 cr.</span></li>
+                                <li>Estructuras de datos I <span class="cred">4 cr.</span></li>
+                                <li>Idioma extranjero I <span class="cred">2 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem4" aria-expanded="false" aria-controls="sem4">
+                            Semestre IV <span class="cantidad">18 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem4" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Ecuaciones diferenciales <span class="cred">3 cr.</span></li>
+                                <li>Estadística para ingeniería <span class="cred">4 cr.</span></li>
+                                <li>Ingeniería de software I <span class="cred">4 cr.</span></li>
+                                <li>Estructuras de datos II <span class="cred">4 cr.</span></li>
+                                <li>Sistemas operativos <span class="cred">3 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem5" aria-expanded="false" aria-controls="sem5">
+                            Semestre V <span class="cantidad">18 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem5" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Métodos numéricos <span class="cred">4 cr.</span></li>
+                                <li>Ingeniería de software II <span class="cred">4 cr.</span></li>
+                                <li>Programación web <span class="cred">4 cr.</span></li>
+                                <li>Diseño de base de datos <span class="cred">4 cr.</span></li>
+                                <li>Idioma extranjero II <span class="cred">2 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem6" aria-expanded="false" aria-controls="sem6">
+                            Semestre VI <span class="cantidad">18 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem6" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Modelos determinísticos <span class="cred">4 cr.</span></li>
+                                <li>Ingeniería de software III <span class="cred">4 cr.</span></li>
+                                <li>Programación móvil <span class="cred">4 cr.</span></li>
+                                <li>Redes informáticas I <span class="cred">4 cr.</span></li>
+                                <li>Filosofía e historia de la ciencia <span class="cred">2 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem7" aria-expanded="false" aria-controls="sem7">
+                            Semestre VII <span class="cantidad">18 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem7" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Proyectos software <span class="cred">4 cr.</span></li>
+                                <li>Inteligencia computacional I <span class="cred">4 cr.</span></li>
+                                <li>Redes informáticas II <span class="cred">4 cr.</span></li>
+                                <li>Administración de base de datos <span class="cred">4 cr.</span></li>
+                                <li>Metodología de la investigación I <span class="cred">2 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem8" aria-expanded="false" aria-controls="sem8">
+                            Semestre VIII <span class="cantidad">18 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem8" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>PESI <span class="cred">4 cr.</span></li>
+                                <li>Inteligencia computacional II <span class="cred">4 cr.</span></li>
+                                <li>Taller: emprendimiento e innovación <span class="cred">3 cr.</span></li>
+                                <li>Metodología de la investigación II <span class="cred">2 cr.</span></li>
+                                <li>Ética <span class="cred">2 cr.</span></li>
+                                <li>Desarrollo humano <span class="cred">3 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem9" aria-expanded="false" aria-controls="sem9">
+                            Semestre IX <span class="cantidad">18 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem9" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Electiva I <span class="cred">4 cr.</span></li>
+                                <li>Electiva II <span class="cred">4 cr.</span></li>
+                                <li>Gestión tecnológica <span class="cred">3 cr.</span></li>
+                                <li>Taller de escritura científica <span class="cred">4 cr.</span></li>
+                                <li>Universidad, región y medio ambiente <span class="cred">3 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#sem10" aria-expanded="false" aria-controls="sem10">
+                            Semestre X <span class="cantidad">18 créditos</span>
+                        </button>
+                    </h3>
+                    <div id="sem10" class="accordion-collapse collapse" data-bs-parent="#semestres">
+                        <div class="accordion-body">
+                            <ul class="materias">
+                                <li>Electiva III <span class="cred">4 cr.</span></li>
+                                <li>Electiva IV <span class="cred">4 cr.</span></li>
+                                <li>Opción de grado <span class="cred">10 cr.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- PERFIL DEL PROFESIONAL -->
+    <section class="seccion perfil" id="perfil">
+        <div class="container">
+            <h2 class="titulo-seccion">Perfil del profesional</h2>
+
+            <div class="perfil-caja">
+                <div class="perfil-foto" role="img" aria-label="Estudiantes trabajando frente a un computador"></div>
+
+                <div class="perfil-panel">
+                    <ul class="perfil-lista">
+                        <li>
+                            <i class="bi bi-check2-circle"></i>
+                            <p>Profesional con bases sólidas en ciencias, tecnología y humanidades, con sentido ético y
+                                comprensión de la realidad social y económica de la región y del país.</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i>
+                            <p>Líder que analiza, diseña e implementa soluciones computacionales a los problemas de las
+                                organizaciones.</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i>
+                            <p>Capaz de formular y ejecutar proyectos de software, redes, datos e inteligencia
+                                computacional en entidades públicas y privadas.</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i>
+                            <p>Con espíritu investigador y emprendedor, comprometido con el desarrollo sostenible de la
+                                Amazonia.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Campo laboral -->
+    <section class="seccion fondo-claro" id="campo">
+        <div class="container">
+            <h2 class="titulo-seccion">Campo laboral</h2>
+            <p class="texto mb-4">Un ingeniero de sistemas de la Amazonia puede desempeñarse en empresas, entidades
+                públicas, centros de investigación o crear su propia empresa.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="campo"><i class="bi bi-code-slash"></i>
+                        <h3>Desarrollo de software</h3>
+                        <p>Diseño y construcción de aplicaciones web, móviles y empresariales.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="campo"><i class="bi bi-shield-lock"></i>
+                        <h3>Redes y seguridad</h3>
+                        <p>Administración de infraestructura tecnológica y protección de la información.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="campo"><i class="bi bi-graph-up"></i>
+                        <h3>Datos e inteligencia artificial</h3>
+                        <p>Análisis de datos y modelos que apoyan la toma de decisiones.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="campo"><i class="bi bi-kanban"></i>
+                        <h3>Gestión de proyectos TI</h3>
+                        <p>Planeación, dirección y seguimiento de proyectos de tecnología.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="campo"><i class="bi bi-rocket-takeoff"></i>
+                        <h3>Emprendimiento</h3>
+                        <p>Creación de empresas de base tecnológica para la región.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="campo"><i class="bi bi-mortarboard"></i>
+                        <h3>Investigación y docencia</h3>
+                        <p>Generación de conocimiento y formación de nuevos profesionales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Docentes -->
+    <section class="seccion" id="docentes">
+        <div class="container">
+            <h2 class="titulo-seccion">Docentes de planta</h2>
+
+            <div class="row g-4 mt-3 justify-content-center">
+
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="docente">
+                        <span class="foto"><img src="img/docente1.jpg" alt="Elio Fabio Sánchez Trujillo "></span>
+                        <h3>Elio Fabio Sánchez Trujillo </h3>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="docente">
+                        <span class="foto"><img src="img/docente2.jpg" alt="Edwin Eduardo Millán Rojas"></span>
+                        <h3>Edwin Eduardo Millán Rojas</h3>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="docente">
+                        <span class="foto"><img src="img/docente3.jpg" alt="Wilmer Arley Patiño Perdomo"></span>
+                        <h3>Wilmer Arley Patiño Perdomo</h3>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="docente">
+                        <span class="foto"><img src="img/docente4.jpg" alt="Fredy Antonio Verástegui"></span>
+                        <h3>Fredy Antonio Verástegui</h3>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg">
+                    <div class="docente">
+                        <span class="foto"><img src="img/docente5.jpg" alt="Ruth Dary Escobar Sarria"></span>
+                        <h3>Ruth Dary Escobar Sarria</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ADMISIONES -->
+    <section class="seccion admisiones" id="admisiones">
+        <div class="container">
+            <div class="row gx-lg-5 gy-4">
+                <div class="col-lg-5">
+                    <div class="lateral">
+
+                        <h2 class="titulo-seccion">Admisiones</h2>
+                        <p class="texto">Sigue estos pasos para ingresar al programa de Ingeniería de Sistemas. Las
+                            fechas cambian cada semestre, así que revisa siempre el calendario académico vigente.</p>
+
+                        <div class="botones">
+                            <a href="#" class="btn btn-rojo btn-lg">
+                                Inscríbete en línea <i class="bi bi-arrow-right"></i>
+                            </a>
+                            <a href="#" class="btn btn-borde-verde btn-lg">
+                                <i class="bi bi-calendar-event"></i> Calendario académico
+                            </a>
+                        </div>
+
+                        <!-- Lista de documentos -->
+                        <div class="lista-doc">
+                            <h3><i class="bi bi-folder-check"></i> Ten listos tus documentos</h3>
+                            <ul>
+                                <li>Documento de identidad</li>
+                                <li>Diploma o acta de grado de bachiller</li>
+                                <li>Resultados de las Pruebas Saber 11</li>
+                            </ul>
+                        </div>
+
+                        <!-- Ayuda -->
+                        <div class="ayuda">
+                            <i class="bi bi-headset"></i>
+                            <div>
+                                <strong>¿Tienes dudas?</strong>
+                                <span>Escríbenos a <a
+                                        href="mailto:sistemas@ejemplo.edu.co">sistemas@ejemplo.edu.co</a></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Columna derecha: pasos numerados -->
+                <div class="col-lg-7">
+                    <ol class="pasos">
+
+                        <li>
+                            <div class="paso-card">
+                                <i class="bi bi-laptop paso-ico"></i>
+                                <div>
+                                    <strong>Consulta la convocatoria</strong>
+                                    <p>Ingresa a la página oficial de la Universidad de la Amazonia y revisa las fechas
+                                        de inscripción. Verifica que Ingeniería de Sistemas esté disponible en la oferta
+                                        académica.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="paso-card">
+                                <i class="bi bi-credit-card-2-front paso-ico"></i>
+                                <div>
+                                    <strong>Realiza el pago de inscripción</strong>
+                                    <p>Genera el recibo de pago en la plataforma y cancela el valor
+                                        establecido por la universidad. Este pago es necesario para continuar con el
+                                        proceso.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="paso-card">
+                                <i class="bi bi-person-vcard paso-ico"></i>
+                                <div>
+                                    <strong>Diligencia el formulario de inscripción</strong>
+                                    <p>Completa el formulario en línea con tus datos personales, información académica y
+                                        selecciona Ingeniería de Sistemas como programa al que deseas ingresar.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="paso-card">
+                                <i class="bi bi-search paso-ico"></i>
+                                <div>
+                                    <strong>Espera los resultados</strong>
+                                    <p>La Universidad realiza el proceso de selección teniendo en cuenta los resultados
+                                        de las Pruebas de Estado (Saber 11) y los criterios de admisión establecidos por
+                                        la UDLA.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="paso-card">
+                                <i class="bi bi-mortarboard paso-ico"></i>
+                                <div>
+                                    <strong>Consulta tu admisión y matricúlate</strong>
+                                    <p>Si apareces como admitido, debes presentar los documentos solicitados, realizar
+                                        la liquidación y finalmente efectuar la matrícula en las fechas indicadas por la
+                                        Universidad.</p>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- DOCUMENTOS Y NOTICIAS -->
+    <section class="seccion" id="documentos">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- IZQUIERDA: documentos de interés -->
+                <div class="col-lg-6">
+                    <h2 class="titulo-doble">
+                        <strong>Documentos de</strong>
+                        <span>interés</span>
+                    </h2>
+
+                    <a class="doc-card"
+                        href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2002/Acuerdo%2019%20-%20Por%20el%20cual%20se%20adopta%20la%20linea%20de%20investigacion%20Sistemas%20de%20Formacion%20Geografica%20para%20la%20facultad%20de%20ingenieria.pdf"
+                        download>
+                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                        <span class="doc-texto">
+                            <strong>Acuerdo No. 019 de 2002: Línea de Investigación en Sistemas de Información
+                                Geográfica</strong>
+                            <small>PDF</small>
+                        </span>
+                        <i class="bi bi-download doc-flecha"></i>
+                    </a>
+
+                    <a class="doc-card" href="https://drive.google.com/drive/folders/1OjF8Tb43WolUrTwbHwLWE9UDTKP45xVQ"
+                        download>
+                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                        <span class="doc-texto">
+                            <strong>Contenidos programáticos pensum 2020</strong>
+                            <small>PDF</small>
+                        </span>
+                        <i class="bi bi-download doc-flecha"></i>
+                    </a>
+
+                    <a class="doc-card"
+                        href="https://www.uniamazonia.edu.co/documentos/docs/Programas%20Academicos/Ingenieria%20de%20Sistemas/Formatos%20de%20Opcion%20de%20grado/Opciones%20de%20grado.pdf"
+                        download>
+                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                        <span class="doc-texto">
+                            <strong>Opciones de grado</strong>
+                            <small>PDF</small>
+                        </span>
+                        <i class="bi bi-download doc-flecha"></i>
+                    </a>
+
+                    <a class="doc-card" href="docs/Formatos_opcion_de_grado.pdf" download>
+                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                        <span class="doc-texto">
+                            <strong>Formatos de opción de grado</strong>
+                            <small>PDF</small>
+                        </span>
+                        <i class="bi bi-download doc-flecha"></i>
+                    </a>
+
+                    <a class="doc-card" href="docs/Formato_notificacion_opcion_de_grado.pdf" download>
+                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                        <span class="doc-texto">
+                            <strong>Formato de notificación de opción de grado</strong>
+                            <small>PDF</small>
+                        </span>
+                        <i class="bi bi-download doc-flecha"></i>
+                    </a>
+
+                    <a class="doc-card" href="docs/Protocolo_sustentacion.pdf" download>
+                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                        <span class="doc-texto">
+                            <strong>Protocolo de sustentación y socialización</strong>
+                            <small>PDF</small>
+                        </span>
+                        <i class="bi bi-download doc-flecha"></i>
+                    </a>
+
+                    <a class="doc-card" href="docs/Brochure_Ingenieria_de_Sistemas.pdf" download>
+                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                        <span class="doc-texto">
+                            <strong>Brochure Ingeniería de Sistemas</strong>
+                            <small>PDF</small>
+                        </span>
+                        <i class="bi bi-download doc-flecha"></i>
+                    </a>
+                </div>
+
+                <!-- DERECHA: noticias -->
+                <div class="col-lg-6" id="noticias">
+                    <h2 class="titulo-doble">
+                        <strong>Últimas</strong>
+                        <span>noticias</span>
+                    </h2>
+
+                    <article class="noticia">
+                        <div class="noticia-img">
+                            <img src="./Img/maraton.jpeg" alt="Descripción de la noticia">
+                            <span class="noticia-fecha">3 oct 2026</span>
+                        </div>
+                        <div class="noticia-cuerpo">
+                            <h3>Maratonistas Programación competitiva</h3>
+                            <p>Estudiantes del programa participaron en la maratón de programación nacional realizada en
+                                la ciudad de bogota, logrando un muy buen luegar en la board.
+                            </p>
+                            <a href="#" class="noticia-mas">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="noticia">
+                        <div class="noticia-img">
+                            <img src="./Img/maraton.jpeg" alt="Descripción de la noticia">
+                            <span class="noticia-fecha">3 oct 2026</span>
+                        </div>
+                        <div class="noticia-cuerpo">
+                            <h3>Semilleros de investigación presentan sus proyectos</h3>
+                            <p>Estudiantes del programa compartieron sus avances en software y datos.</p>
+                            <a href="#" class="noticia-mas">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="noticia">
+                        <div class="noticia-img">
+                            <img src="./Img/maraton.jpeg" alt="Descripción de la noticia">
+                            <span class="noticia-fecha">3 oct 2026</span>
+                        </div>
+                        <div class="noticia-cuerpo">
+                            <h3>Nuevos equipos para los laboratorios de sistemas</h3>
+                            <p>Los espacios de práctica se renuevan para mejorar la formación.</p>
+                            <a href="#" class="noticia-mas">Leer más <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <a href="#" class="btn btn-borde-verde">Ver todas las noticias</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- ============================================================
+  5) PREGUNTAS FRECUENTES
+============================================================ -->
+    <section class="seccion" id="faq">
+        <div class="container">
+            <h2 class="titulo-seccion">Preguntas frecuentes</h2>
+            <div class="accordion mt-4" id="preguntas">
+                <div class="accordion-item">
+                    <h3 class="accordion-header"><button class="accordion-button" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true"
+                            aria-controls="q1">¿Cuánto dura el programa?</button></h3>
+                    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#preguntas">
+                        <div class="accordion-body">Diez semestres, con 178 créditos en total.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">¿Es
+                            presencial o virtual?</button></h3>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+                        <div class="accordion-body">Es presencial, en jornada diurna, en Florencia, Caquetá.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false"
+                            aria-controls="q3">¿Cuánto cuesta la matrícula?</button></h3>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+                        <div class="accordion-body">El costo por semestre depende de los ingresos del grupo familiar.
+                            Confirma el valor vigente en la oficina de admisiones.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">¿Qué
+                            documentos necesito para inscribirme?</button></h3>
+                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+                        <div class="accordion-body">Escribe aquí los requisitos oficiales: documento de identidad,
+                            resultados de la prueba Saber 11, entre otros.</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">¿Qué
+                            opciones de grado existen?</button></h3>
+                    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+                        <div class="accordion-body">Consulta el documento "Opciones de grado" en la sección Documentos
+                            de interés.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+  6) UBICACIÓN: pegar DESPUÉS de Documentos y noticias, antes del footer
+============================================================ -->
+    <section class="seccion fondo-claro" id="ubicacion">
+        <div class="container">
+            <h2 class="titulo-seccion">Dónde estamos</h2>
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-4">
+                    <ul class="datos">
+                        <li class="dato"><i class="bi bi-geo-alt icono"></i>
+                            <div><strong>Sede principal</strong><span>Florencia, Caquetá, Colombia</span></div>
+                        </li>
+                        <li class="dato"><i class="bi bi-clock icono"></i>
+                            <div><strong>Atención</strong><span>Lunes a viernes, en horario de oficina</span></div>
+                        </li>
+                        <li class="dato"><i class="bi bi-envelope icono"></i>
+                            <div><strong>Correo</strong><span>sistemas@ejemplo.edu.co</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8">
+                    <iframe class="mapa" title="Mapa de la Universidad de la Amazonia" loading="lazy"
+                        src="https://www.google.com/maps?q=Universidad+de+la+Amazonia+Florencia+Caquet%C3%A1&output=embed"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie" id="contacto">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Logo y descripción -->
+                <div class="col-lg-4">
+                    <img src="img/logo_blanco.png" alt="Universidad de la Amazonia" class="pie-logo">
+                    <p class="pie-texto">Programa de Ingeniería de Sistemas. Formamos ingenieros que crean tecnología
+                        para la Amazonia y para Colombia.</p>
+                </div>
+
+                <!-- Enlaces -->
+                <div class="col-6 col-lg-2">
+                    <h3 class="pie-titulo">Programa</h3>
+                    <ul class="pie-lista">
+                        <li><a href="#presentacion">Presentación</a></li>
+                        <li><a href="#plan">Plan de estudios</a></li>
+                        <li><a href="#admisiones">Admisiones</a></li>
+                        <li><a href="#documentos">Documentos</a></li>
+                        <li><a href="#noticias">Noticias</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-6 col-lg-3">
+                    <h3 class="pie-titulo">Contacto</h3>
+                    <ul class="pie-lista">
+                        <li><i class="bi bi-geo-alt"></i> Florencia, Caquetá, Colombia</li>
+                        <li><i class="bi bi-envelope"></i> <a
+                                href="mailto:sistemas@ejemplo.edu.co">sistemas@ejemplo.edu.co</a></li>
+                        <li><i class="bi bi-telephone"></i> (608) 000 0000</li>
+                        <li><i class="bi bi-globe2"></i> <a href="https://www.uniamazonia.edu.co" target="_blank"
+                                rel="noopener">www.uniamazonia.edu.co</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes -->
+                <div class="col-lg-3">
+                    <h3 class="pie-titulo">Síguenos</h3>
+                    <div class="redes-iconos">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                    <p class="pie-texto mt-3">@uniamazonia &nbsp;//&nbsp; 98.1 FM</p>
+                </div>
+
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="pie-fin">
+                <span>© 2026 Universidad de la Amazonia. Vigilada Ministerio de Educación Nacional.</span>
+                <a href="#inicio">Volver arriba <i class="bi bi-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
