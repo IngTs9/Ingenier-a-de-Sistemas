@@ -527,10 +527,12 @@
                             fechas cambian cada semestre, así que revisa siempre el calendario académico vigente.</p>
 
                         <div class="botones">
-                            <a href="https://chaira.uniamazonia.edu.co/academicov3/vistas/publico/Inscripciones/Nuevos/InicialNuevos.aspx?nied=1" class="btn btn-rojo btn-lg">
+                            <a href="https://chaira.uniamazonia.edu.co/academicov3/vistas/publico/Inscripciones/Nuevos/InicialNuevos.aspx?nied=1"
+                                class="btn btn-rojo btn-lg">
                                 Inscríbete en línea <i class="bi bi-arrow-right"></i>
                             </a>
-                            <a href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2026/Acuerdo%20No.%2034%20de%202026%20Calendario%20pregrado%20presencial%20primer%20periodo%20de%202027.pdf" class="btn btn-borde-verde btn-lg">
+                            <a href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2026/Acuerdo%20No.%2034%20de%202026%20Calendario%20pregrado%20presencial%20primer%20periodo%20de%202027.pdf"
+                                class="btn btn-borde-verde btn-lg">
                                 <i class="bi bi-calendar-event"></i> Calendario académico
                             </a>
                         </div>
@@ -709,84 +711,102 @@
                         <i class="bi bi-download doc-flecha"></i>
                     </a>
                 </div>
-<!-- DERECHA: noticias -->
-<div class="col-lg-6" id="noticias">
-    <h2 class="titulo-doble">
-        <strong>Últimas</strong>
-        <span>noticias</span>
-    </h2>
+                <!-- DERECHA: noticias -->
+                <div class="col-lg-6" id="noticias">
+                    <h2 class="titulo-doble">
+                        <strong>Últimas</strong>
+                        <span>noticias</span>
+                    </h2>
 
-    <div id="carruselNoticias" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                    <div id="carruselNoticias" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
 
-        <!-- Las diapositivas -->
-        <div class="carousel-inner">
+                        <!-- Las diapositivas -->
+                        <div class="carousel-inner">
 
-            <div class="carousel-item active">
-                <article class="noticia">
-                    <div class="noticia-img">
-                        <img src="./Img/maraton.jpeg" alt="Estudiantes en la maratón de programación">
-                        <span class="noticia-fecha">3 oct 2026</span>
+                            <div class="carousel-item active">
+                                <article class="noticia">
+                                    <div class="noticia-img">
+                                        <img src="./Img/maratonistas.jpg" alt="Estudiantes en la maratón de programación">
+                                        <span class="noticia-fecha">3 oct 2026</span>
+                                    </div>
+                                    <div class="noticia-cuerpo">
+                                        <h3>Ingeniería de Sistemas participa en la XL Maratón Nacional de Programación</h3>
+                                        <p>Estudiantes de Ingeniería de Sistemas de la Universidad de la Amazonia
+                                            participan en la XL Maratón Nacional de Programación ACIS/REDIS 2026,
+                                            realizada en Bogotá.
+                                            Los equipos ponen a prueba sus habilidades en programación, análisis y
+                                            resolución de problemas con el acompañamiento de su docente coach.</p>
+                                        <a href="#" class="noticia-mas">Leer más <i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="carousel-item">
+                                <article class="noticia">
+                                    <div class="noticia-img">
+                                        <img src="./Img/noticia2.jpg" alt="Docente de Ingeniería de Sistemas">
+                                        <span class="noticia-fecha">1 oct 2026</span>
+                                    </div>
+                                    <div class="noticia-cuerpo">
+                                        <h3>Docente de Ingeniería de Sistemas destaca por su producción científica</h3>
+                                        <p>El Dr. Oscar Fabián Patiño Perdomo, docente de la Universidad de la Amazonia,
+                                            sobresale por sus aportes a la investigación científica.
+                                            Su participación en publicaciones académicas fortalece la visibilidad y el
+                                            reconocimiento de la universidad.</p>
+                                        <a href="https://www.facebook.com/share/p/1DzWcYAybB/" class="noticia-mas">Leer
+                                            más <i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="carousel-item">
+                                <article class="noticia">
+                                    <div class="noticia-img">
+                                        <img src="./Img/noticia3.jpg" alt="Ingeniería de Sistemas en CITICI 2026">
+                                        <span class="noticia-fecha">25 sep 2026</span>
+                                    </div>
+                                    <div class="noticia-cuerpo">
+                                        <h3>Ingeniería de Sistemas participa en CITICI 2026</h3>
+                                        <p>El docente John Arley García Quintero representa a la Universidad de la
+                                            Amazonia en CITICI 2026 con una investigación sobre los riesgos de las redes
+                                            sociales en familias rurales.
+                                            Su participación destaca el compromiso del programa con la educación digital
+                                            y la transformación responsable.</p>
+                                        <a href="https://www.facebook.com/share/1FkFhA6RtU/" class="noticia-mas">Leer
+                                            más <i class="bi bi-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+
+                        <!-- Barra de control: puntos a la izquierda, flechas a la derecha -->
+                        <div class="noticias-barra">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Noticia 1"></button>
+                                <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="1"
+                                    aria-label="Noticia 2"></button>
+                                <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="2"
+                                    aria-label="Noticia 3"></button>
+                            </div>
+
+                            <div class="noticias-flechas">
+                                <button class="flecha" type="button" data-bs-target="#carruselNoticias"
+                                    data-bs-slide="prev" aria-label="Noticia anterior">
+                                    <i class="bi bi-chevron-left"></i>
+                                </button>
+                                <button class="flecha" type="button" data-bs-target="#carruselNoticias"
+                                    data-bs-slide="next" aria-label="Noticia siguiente">
+                                    <i class="bi bi-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="noticia-cuerpo">
-                        <h3>Maratonistas de programación competitiva</h3>
-                        <p>Estudiantes del programa participaron en la maratón de programación nacional realizada en la ciudad de Bogotá, logrando un muy buen lugar en la tabla de posiciones.</p>
-                        <a href="#" class="noticia-mas">Leer más <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
 
-            <div class="carousel-item">
-                <article class="noticia">
-                    <div class="noticia-img">
-                        <img src="./Img/maraton.jpeg" alt="Semilleros de investigación">
-                        <span class="noticia-fecha">3 oct 2026</span>
-                    </div>
-                    <div class="noticia-cuerpo">
-                        <h3>Semilleros de investigación presentan sus proyectos</h3>
-                        <p>Estudiantes del programa compartieron sus avances en software y datos.</p>
-                        <a href="#" class="noticia-mas">Leer más <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="carousel-item">
-                <article class="noticia">
-                    <div class="noticia-img">
-                        <img src="./Img/maraton.jpeg" alt="Laboratorios de sistemas">
-                        <span class="noticia-fecha">3 oct 2026</span>
-                    </div>
-                    <div class="noticia-cuerpo">
-                        <h3>Nuevos equipos para los laboratorios de sistemas</h3>
-                        <p>Los espacios de práctica se renuevan para mejorar la formación.</p>
-                        <a href="#" class="noticia-mas">Leer más <i class="bi bi-arrow-right"></i></a>
-                    </div>
-                </article>
-            </div>
-
-        </div>
-
-        <!-- Barra de control: puntos a la izquierda, flechas a la derecha -->
-        <div class="noticias-barra">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Noticia 1"></button>
-                <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="1" aria-label="Noticia 2"></button>
-                <button type="button" data-bs-target="#carruselNoticias" data-bs-slide-to="2" aria-label="Noticia 3"></button>
-            </div>
-
-            <div class="noticias-flechas">
-                <button class="flecha" type="button" data-bs-target="#carruselNoticias" data-bs-slide="prev" aria-label="Noticia anterior">
-                    <i class="bi bi-chevron-left"></i>
-                </button>
-                <button class="flecha" type="button" data-bs-target="#carruselNoticias" data-bs-slide="next" aria-label="Noticia siguiente">
-                    <i class="bi bi-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-    <a href="#" class="btn btn-borde-verde mt-3">Ver todas las noticias</a>
-</div>
+                    <a href="#" class="btn btn-borde-verde mt-3">Ver todas las noticias</a>
+                </div>
             </div>
         </div>
     </section>
@@ -918,10 +938,14 @@
                 <div class="col-lg-3">
                     <h3 class="pie-titulo">Síguenos</h3>
                     <div class="redes-iconos">
-                        <a href="https://www.facebook.com/share/18tr9adzef/" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/uniamazonia?stkn=MXE3M21wNHllYTVxeg==" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://youtube.com/@uamazonia?si=G44PZ3llB138PX_h" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-                        <a href="https://www.tiktok.com/@ingenieriadesistemasudla?_r=1&_t=ZS-9AHUij1PnBU" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://www.facebook.com/share/18tr9adzef/" aria-label="Facebook"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/uniamazonia?stkn=MXE3M21wNHllYTVxeg=="
+                            aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://youtube.com/@uamazonia?si=G44PZ3llB138PX_h" aria-label="YouTube"><i
+                                class="bi bi-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@ingenieriadesistemasudla?_r=1&_t=ZS-9AHUij1PnBU"
+                            aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
                     </div>
                     <p class="pie-texto mt-3">@uniamazonia &nbsp;//&nbsp; 98.1 FM</p>
                 </div>
