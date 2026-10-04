@@ -14,33 +14,26 @@
 
     <!-- MENÚ: navbar-expand-lg = se muestra completo en pantallas grandes
        y se esconde tras un botón en celulares. sticky-top = queda fijo arriba -->
-    <nav class="navbar navbar-expand-lg sticky-top menu">
+    <nav class="navbar navbar-expand-xl sticky-top menu" id="barraMenu">
         <div class="container">
 
-            <!-- Logo y nombre -->
             <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+                <a href="https://www.uniamazonia.edu.co" target="_blank" rel="noopener noreferrer">
                     <img src="Img/Logo_Uniamazonia-removebg-preview.png" alt="Logo Universidad de la Amazonia"
                         class="logo">
-                    <span>Universidad de la Amazonia</span>
                 </a>
+                <span>Universidad de la Amazonia</span>
+            </a>
 
-                <!-- Botón de hamburguesa (solo se ve en celular).
-           data-bs-target="#opciones" apunta al id de la lista de abajo -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#opciones"
-                    aria-controls="opciones" aria-expanded="false" aria-label="Abrir menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Lista de enlaces: este es el bloque que se esconde y se muestra -->
-                <div class="collapse navbar-collapse" id="opciones">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#presentacion">Presentación</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#plan">Plan de estudios</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#admisiones">Admisiones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
+            <ul class="navbar-nav flex-row menu-lista">
+                <li class="nav-item"><a class="nav-link" href="#presentacion">Presentación</a></li>
+                <li class="nav-item"><a class="nav-link" href="#plan">Plan de estudios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#perfil">Perfil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#docentes">Docentes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#admisiones">Admisiones</a></li>
+                <li class="nav-item"><a class="nav-link" href="#documentos">Documentos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
 
         </div>
     </nav>
@@ -479,35 +472,35 @@
 
                 <div class="col-6 col-md-4 col-lg">
                     <div class="docente">
-                        <span class="foto"><img src="img/docente1.jpg" alt="Elio Fabio Sánchez Trujillo "></span>
+                        <span class="foto"><img src="./Img/elio.jpeg" alt="Elio Fabio Sánchez Trujillo "></span>
                         <h3>Elio Fabio Sánchez Trujillo </h3>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg">
                     <div class="docente">
-                        <span class="foto"><img src="img/docente2.jpg" alt="Edwin Eduardo Millán Rojas"></span>
+                        <span class="foto"><img src="./Img/perfild.jpeg" alt="Edwin Eduardo Millán Rojas"></span>
                         <h3>Edwin Eduardo Millán Rojas</h3>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg">
                     <div class="docente">
-                        <span class="foto"><img src="img/docente3.jpg" alt="Wilmer Arley Patiño Perdomo"></span>
+                        <span class="foto"><img src="./Img/wilmer.jpg" alt="Wilmer Arley Patiño Perdomo"></span>
                         <h3>Wilmer Arley Patiño Perdomo</h3>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg">
                     <div class="docente">
-                        <span class="foto"><img src="img/docente4.jpg" alt="Fredy Antonio Verástegui"></span>
+                        <span class="foto"><img src="./Img/perfild.jpeg" alt="Fredy Antonio Verástegui"></span>
                         <h3>Fredy Antonio Verástegui</h3>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg">
                     <div class="docente">
-                        <span class="foto"><img src="img/docente5.jpg" alt="Ruth Dary Escobar Sarria"></span>
+                        <span class="foto"><img src="./Img/perfild.jpeg" alt="Ruth Dary Escobar Sarria"></span>
                         <h3>Ruth Dary Escobar Sarria</h3>
                     </div>
                 </div>
@@ -634,7 +627,6 @@
     <section class="seccion" id="documentos">
         <div class="container">
             <div class="row g-5">
-
                 <!-- IZQUIERDA: documentos de interés -->
                 <div class="col-lg-6">
                     <h2 class="titulo-doble">
@@ -642,9 +634,8 @@
                         <span>interés</span>
                     </h2>
 
-                    <a class="doc-card"
-                        href="https://www.uniamazonia.edu.co/documentos/docs/Consejo%20Academico/Acuerdos/2002/Acuerdo%2019%20-%20Por%20el%20cual%20se%20adopta%20la%20linea%20de%20investigacion%20Sistemas%20de%20Formacion%20Geografica%20para%20la%20facultad%20de%20ingenieria.pdf"
-                        download>
+                    <!-- PDF -->
+                    <a class="doc-card" href="docs/Acuerdo_019_2002.pdf" download>
                         <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
                         <span class="doc-texto">
                             <strong>Acuerdo No. 019 de 2002: Línea de Investigación en Sistemas de Información
@@ -654,19 +645,19 @@
                         <i class="bi bi-download doc-flecha"></i>
                     </a>
 
-                    <a class="doc-card" href="https://drive.google.com/drive/folders/1OjF8Tb43WolUrTwbHwLWE9UDTKP45xVQ"
-                        download>
-                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                    <!-- Carpeta de Drive -->
+                    <a class="doc-card carpeta" target="_blank" rel="noopener"
+                        href="https://drive.google.com/drive/folders/1OjF8Tb43WolUrTwbHwLWE9UDTKP45xVQ">
+                        <span class="doc-ico"><i class="bi bi-folder2-open"></i></span>
                         <span class="doc-texto">
                             <strong>Contenidos programáticos pensum 2020</strong>
-                            <small>PDF</small>
+                            <small>CARPETA EN DRIVE</small>
                         </span>
-                        <i class="bi bi-download doc-flecha"></i>
+                        <i class="bi bi-box-arrow-up-right doc-flecha"></i>
                     </a>
 
-                    <a class="doc-card"
-                        href="https://www.uniamazonia.edu.co/documentos/docs/Programas%20Academicos/Ingenieria%20de%20Sistemas/Formatos%20de%20Opcion%20de%20grado/Opciones%20de%20grado.pdf"
-                        download>
+                    <!-- PDF -->
+                    <a class="doc-card" href="docs/Opciones%20de%20grado.pdf" download>
                         <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
                         <span class="doc-texto">
                             <strong>Opciones de grado</strong>
@@ -675,16 +666,19 @@
                         <i class="bi bi-download doc-flecha"></i>
                     </a>
 
-                    <a class="doc-card" href="docs/Formatos_opcion_de_grado.pdf" download>
-                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                    <!-- Carpeta de Drive -->
+                    <a class="doc-card carpeta" target="_blank" rel="noopener"
+                        href="https://drive.google.com/drive/folders/14EBlcWxRo1mfWvUKeTcIXoWUWORG0KUJ">
+                        <span class="doc-ico"><i class="bi bi-folder2-open"></i></span>
                         <span class="doc-texto">
                             <strong>Formatos de opción de grado</strong>
-                            <small>PDF</small>
+                            <small>CARPETA EN DRIVE</small>
                         </span>
-                        <i class="bi bi-download doc-flecha"></i>
+                        <i class="bi bi-box-arrow-up-right doc-flecha"></i>
                     </a>
 
-                    <a class="doc-card" href="docs/Formato_notificacion_opcion_de_grado.pdf" download>
+                    <!-- PDF -->
+                    <a class="doc-card" href="docs/FO-M-DC-07-03.pdf" download>
                         <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
                         <span class="doc-texto">
                             <strong>Formato de notificación de opción de grado</strong>
@@ -693,16 +687,19 @@
                         <i class="bi bi-download doc-flecha"></i>
                     </a>
 
-                    <a class="doc-card" href="docs/Protocolo_sustentacion.pdf" download>
-                        <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
+                    <!-- Carpeta de Drive -->
+                    <a class="doc-card carpeta" target="_blank" rel="noopener"
+                        href="https://drive.google.com/drive/folders/1IuMu73ZW26iHtAeWZHUp9UXN2dHLfxus">
+                        <span class="doc-ico"><i class="bi bi-folder2-open"></i></span>
                         <span class="doc-texto">
                             <strong>Protocolo de sustentación y socialización</strong>
-                            <small>PDF</small>
+                            <small>CARPETA EN DRIVE</small>
                         </span>
-                        <i class="bi bi-download doc-flecha"></i>
+                        <i class="bi bi-box-arrow-up-right doc-flecha"></i>
                     </a>
 
-                    <a class="doc-card" href="docs/Brochure_Ingenieria_de_Sistemas.pdf" download>
+                    <!-- PDF -->
+                    <a class="doc-card" href="docs/BROCHURE%20INGENIERIA%20DE%20SISTEMAS.pdf" download>
                         <span class="doc-ico"><i class="bi bi-file-earmark-pdf"></i></span>
                         <span class="doc-texto">
                             <strong>Brochure Ingeniería de Sistemas</strong>
@@ -726,11 +723,13 @@
                             <div class="carousel-item active">
                                 <article class="noticia">
                                     <div class="noticia-img">
-                                        <img src="./Img/maratonistas.jpg" alt="Estudiantes en la maratón de programación">
+                                        <img src="./Img/maratonistas.jpg"
+                                            alt="Estudiantes en la maratón de programación">
                                         <span class="noticia-fecha">3 oct 2026</span>
                                     </div>
                                     <div class="noticia-cuerpo">
-                                        <h3>Ingeniería de Sistemas participa en la XL Maratón Nacional de Programación</h3>
+                                        <h3>Ingeniería de Sistemas participa en la XL Maratón Nacional de Programación
+                                        </h3>
                                         <p>Estudiantes de Ingeniería de Sistemas de la Universidad de la Amazonia
                                             participan en la XL Maratón Nacional de Programación ACIS/REDIS 2026,
                                             realizada en Bogotá.
@@ -805,7 +804,7 @@
 
                     </div>
 
-                    <a href="#" class="btn btn-borde-verde mt-3">Ver todas las noticias</a>
+                    <a href="https://www.uniamazonia.edu.co" class="btn btn-borde-verde mt-3">Ver todas las noticias</a>
                 </div>
             </div>
         </div>
@@ -826,7 +825,8 @@
                             data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true"
                             aria-controls="q1">¿Cuánto dura el programa?</button></h3>
                     <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#preguntas">
-                        <div class="accordion-body">Diez semestres, con 178 créditos en total.</div>
+                        <div class="accordion-body">La carrera de Ingeniería de Sistemas tiene una duración de 10
+                            semestres y cuenta con 178 créditos académicos.</div>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -834,7 +834,8 @@
                             data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">¿Es
                             presencial o virtual?</button></h3>
                     <div id="q2" class="accordion-collapse collapse" data-bs-parent="#preguntas">
-                        <div class="accordion-body">Es presencial, en jornada diurna, en Florencia, Caquetá.</div>
+                        <div class="accordion-body">El programa es presencial, en jornada diurna, y se desarrolla en el
+                            campus de Florencia, Caquetá.</div>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -842,8 +843,9 @@
                             data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false"
                             aria-controls="q3">¿Cuánto cuesta la matrícula?</button></h3>
                     <div id="q3" class="accordion-collapse collapse" data-bs-parent="#preguntas">
-                        <div class="accordion-body">El costo por semestre depende de los ingresos del grupo familiar.
-                            Confirma el valor vigente en la oficina de admisiones.</div>
+                        <div class="accordion-body">El valor de la matrícula se establece de acuerdo con la normativa
+                            vigente de la Universidad de la Amazonia. El valor puede variar según las condiciones
+                            económicas y el periodo académico.</div>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -851,8 +853,10 @@
                             data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">¿Qué
                             documentos necesito para inscribirme?</button></h3>
                     <div id="q4" class="accordion-collapse collapse" data-bs-parent="#preguntas">
-                        <div class="accordion-body">Escribe aquí los requisitos oficiales: documento de identidad,
-                            resultados de la prueba Saber 11, entre otros.</div>
+                        <div class="accordion-body">Para el proceso de matrícula, entre los documentos solicitados se
+                            encuentran el documento de identidad, registro civil de nacimiento, diploma o acta de grado
+                            de bachiller y certificado de afiliación a una EPS. Los requisitos pueden variar según el
+                            proceso de admisión.</div>
                     </div>
                 </div>
                 <div class="accordion-item">
@@ -860,8 +864,10 @@
                             data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">¿Qué
                             opciones de grado existen?</button></h3>
                     <div id="q5" class="accordion-collapse collapse" data-bs-parent="#preguntas">
-                        <div class="accordion-body">Consulta el documento "Opciones de grado" en la sección Documentos
-                            de interés.</div>
+                        <div class="accordion-body">La Universidad contempla diferentes opciones, entre ellas pasantía,
+                            proyectos de investigación, plan de negocios, trabajo de grado, monografía, publicación de
+                            resultados de investigación, seminario de investigación y cursos de posgrado, entre otras.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -885,7 +891,7 @@
                             <div><strong>Atención</strong><span>Lunes a viernes, en horario de oficina</span></div>
                         </li>
                         <li class="dato"><i class="bi bi-envelope icono"></i>
-                            <div><strong>Correo</strong><span>sistemas@ejemplo.edu.co</span></div>
+                            <div><strong>Correo</strong><span>pisistemas@uniamazonia.edu.co</span></div>
                         </li>
                     </ul>
                 </div>
@@ -904,7 +910,7 @@
 
                 <!-- Logo y descripción -->
                 <div class="col-lg-4">
-                    <img src="img/logo_blanco.png" alt="Universidad de la Amazonia" class="pie-logo">
+                    <img src="Img/logo_blanco.png" alt="Universidad de la Amazonia" class="pie-logo">
                     <p class="pie-texto">Programa de Ingeniería de Sistemas. Formamos ingenieros que crean tecnología
                         para la Amazonia y para Colombia.</p>
                 </div>
@@ -915,9 +921,12 @@
                     <ul class="pie-lista">
                         <li><a href="#presentacion">Presentación</a></li>
                         <li><a href="#plan">Plan de estudios</a></li>
+                        <li><a href="#perfil">Perfil del profesional</a></li>
+                        <li><a href="#docentes">Docentes</a></li>
                         <li><a href="#admisiones">Admisiones</a></li>
                         <li><a href="#documentos">Documentos</a></li>
                         <li><a href="#noticias">Noticias</a></li>
+                        <li><a href="#faq">Preguntas frecuentes</a></li>
                     </ul>
                 </div>
 
@@ -952,15 +961,13 @@
 
             </div>
 
-            <!-- Barra inferior -->
             <div class="pie-fin">
-                <span>© 2026 Universidad de la Amazonia. Vigilada Ministerio de Educación Nacional.</span>
+                <span>© 2026 Universidad de la Amazonia.
+                    Hecho por Tatiana sanchez ❤️</span>
                 <a href="#inicio">Volver arriba <i class="bi bi-arrow-up"></i></a>
             </div>
         </div>
     </footer>
-
-
 
 
 

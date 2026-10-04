@@ -1,4 +1,12 @@
-/* ===== Colores ===== */
+/* =========================================================
+   ESTILOS - Ingeniería de Sistemas, Universidad de la Amazonia
+   Orden: 1 Colores · 2 Generales · 3 Botones · 4 Menú y portada
+          5 Secciones · 6 Noticias · 7 Pie de página · 8 Celular
+   ========================================================= */
+
+
+/* ===== 1. COLORES =====
+   Si cambias un color aquí, cambia en toda la página. */
 :root {
   --verde: #0f6b3a;
   --verde-oscuro: #094826;
@@ -6,975 +14,55 @@
   --rojo-oscuro: #9e0c24;
   --blanco: #ffffff;
   --texto: #1c2a22;
+  --gris-claro: #f4f7f5;
+  --borde: #dfe6e1;
 
+  /* Así Bootstrap usa nuestros colores */
   --bs-body-color: var(--texto);
-  --bs-body-bg: var(--blanco);
-  --bs-primary: var(--verde);
   --bs-link-color: var(--verde);
   --bs-link-hover-color: var(--rojo);
 }
-/* Espacio entre secciones */
-.seccion {
-  padding: 4rem 0;
-  scroll-margin-top: 90px;   /* el menú fijo no tapa el título al saltar */
-}
-/* ===== Menú ===== */
-.menu {
-  background: var(--blanco);
-  border-bottom: 4px solid var(--rojo);
-}
 
-.logo {
-  height: 50px;
-  width: auto;
-}
 
-.navbar-brand {
+/* ===== 2. GENERALES ===== */
+html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
+[id] { scroll-margin-top: 90px; }          /* el menú fijo no tapa los títulos */
+
+.seccion { padding: 5rem 0; }              /* espacio arriba y abajo de cada sección */
+.fondo-claro,
+.plan,
+.admisiones { background: var(--gris-claro); }
+.admisiones { border-top: 6px solid var(--rojo); }
+
+.texto { max-width: 68ch; }
+
+/* Título con barrita roja debajo */
+.titulo-seccion {
   color: var(--verde);
-  font-weight: 700;
-}
-
-.menu .nav-link {
-  color: var(--texto);
-  font-weight: 600;
-}
-
-.menu .nav-link:hover {
-  color: var(--rojo);
-}
-
-/* ===== Portada ===== */
-/* ===== Portada con imagen ===== */
-.portada-img {
-  display: block;       /* quita el pequeño espacio blanco que deja una imagen normal */
-  width: 100%;          /* ocupa todo el ancho de la pantalla */
-  height: auto;         /* la altura se calcula sola y no se deforma */
-}
-
-/* Celular: la imagen es muy panorámica y se vería diminuta,
-   así que la recortamos mostrando el centro, donde está el título */
-@media (max-width: 767.98px) {
-  .portada-img {
-    height: 190px;
-    object-fit: cover;
-    object-position: 51% center;
-  }
-}
-
-.etiqueta {
-  display: inline-block;
-  background: var(--rojo);
-  color: var(--blanco);
-  padding: 0.25rem 0.75rem;
-  border-radius: 2rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-/* ===== Lista de datos con íconos ===== */
-.datos {
-  list-style: none; 
-  padding: 1.5rem;
-  margin: 3rem 0 3rem;
-  border: 1px solid #03793a;  
-  border-radius: 2rem;
-  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.dato {
-  display: flex;               /* ícono a la izquierda, texto a la derecha */
-  align-items: center;
-  gap: 1.25rem;
-  padding: 1.1rem 0;
-  border-bottom: 1px solid #9aa7a0;   /* la línea separadora */
-}
-
-.dato:first-child {
-  padding-top: 0;
-}
-
-.icono {
-  font-size: 2.4rem;
-  line-height: 1;
-  color: var(--verde);
-  flex-shrink: 0;              /* el ícono no se encoge */
-}
-
-/* Íconos pares en rojo, como el acento de tu imagen */
-.dato:nth-child(even) .icono {
-  color: var(--rojo);
-}
-
-.dato strong {
-  display: block;
-  font-size: 1.25rem;
   font-weight: 800;
+  margin-bottom: 1.5rem;
 }
-
-.dato span {
-  color: #46564c;
-}
-/* ===== Misión y Visión (pestañas) ===== */
-.mv {
-  margin-top: 1.75rem;
-  max-width: 68ch;
-}
-
-.mv .nav-tabs {
-  border-bottom: 1px solid #cfd8d3;
-}
-
-.mv .nav-link {
-  color: var(--texto);
-  font-weight: 700;
-  border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.mv .nav-link:hover {
-  color: var(--rojo);
-}
-
-/* Pestaña activa: texto verde y línea roja arriba */
-.mv .nav-link.active {
-  color: var(--verde);
-  border-top: 3px solid var(--rojo);
-}
-
-.mv-contenido {
-  padding: 1.25rem 1.25rem 0.5rem;
-  background: #f4f7f5;
-  border: 1px solid #cfd8d3;
-  border-top: 0;
-  border-radius: 0 0 0.75rem 0.75rem;
-}
-/* ===== Plan de estudios ===== */
-.plan {
-  background: #f4f7f5;   /* gris verdoso muy claro para separar de las secciones vecinas */
-}
-
-/* Colores del acordeón de Bootstrap */
-.accordion {
-  --bs-accordion-active-bg: #e4f1e9;
-  --bs-accordion-active-color: var(--verde);
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(200, 16, 46, 0.25);
-  --bs-accordion-border-color: #d5ded9;
-}
-
-.accordion-button {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-/* Etiqueta con la cantidad de asignaturas */
-.cantidad {
-  margin-left: 1rem;
-  padding: 0.15rem 0.7rem;
-  border-radius: 2rem;
-  background: var(--verde);
-  color: var(--blanco);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-/* Lista de asignaturas en dos columnas */
-.materias {
-  columns: 2;
-  column-gap: 2rem;
-  margin: 0;
-  padding-left: 1.1rem;
-}
-
-.materias li {
-  margin-bottom: 0.4rem;
-  break-inside: avoid;
-}
-
-/* Viñetas rojas */
-.materias li::marker {
-  color: var(--rojo);
-}
-
-/* En celular, una sola columna */
-@media (max-width: 575.98px) {
-  .materias {
-    columns: 1;
-  }
-}
-/* Créditos al lado de cada asignatura */
-.cred {
-  margin-left: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--rojo-oscuro);
-  white-space: nowrap;   /* evita que "3 cr." se parta en dos líneas */
-}
-/* ===== Perfil del profesional ===== */
-.perfil-caja {
-  display: flex;
-  align-items: flex-start;
-}
-
-/* Foto cortada en diagonal por el lado derecho */
-.perfil-foto {
-  flex: 0 0 45%;
-  min-height: 460px;
-  position: relative;
-  z-index: 2;   /* queda por encima del panel */
-  background: url("../Img/Perfil.jpeg") center / cover var(--verde);
-  clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
-}
-
-/* Panel oscuro: se mete 8% debajo de la foto y arranca más abajo */
-.perfil-panel {
-  flex: 1;
-  margin-left: -8%;
-  margin-top: 3.5rem;
-  padding: 2.5rem 2.5rem 1.5rem calc(8% + 2.5rem);
-  background: #2d3330;
-  color: var(--blanco);
-  border-right: 10px solid var(--verde);
-}
-
-.perfil-lista {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.perfil-lista li {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-.perfil-lista i {
-  font-size: 1.4rem;
-  line-height: 1.3;
-  color: #ff6b82;   /* rojo claro: se lee bien sobre fondo oscuro */
-  flex-shrink: 0;
-}
-
-.perfil-lista p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-/* Celular y tablet: foto arriba, panel abajo, sin diagonal */
-@media (max-width: 991.98px) {
-  .perfil-caja {
-    flex-direction: column;
-  }
-
-  .perfil-foto {
-    width: 100%;
-    min-height: 260px;
-    flex: none;
-    clip-path: none;
-  }
-
-  .perfil-panel {
-    margin: 0;
-    padding: 1.5rem;
-  }
-}
-
-
-
-
-/* ===== Admisiones ===== */
-.admisiones {
-  background: #f4f7f5;
-  border-top: 6px solid var(--rojo);
-}
-
-.nota {
-  margin-top: 1.5rem;
-  padding: 0.9rem 1rem;
-  background: var(--blanco);
-  border-left: 5px solid var(--verde);
-  border-radius: 0 0.5rem 0.5rem 0;
-  font-size: 0.95rem;
-  color: #46564c;
-}
-
-.nota i {
-  color: var(--verde);
-  margin-right: 0.3rem;
-}
-/* ===== Columna lateral de Admisiones ===== */
-
-/* En pantalla grande, la columna se queda fija mientras se bajan los pasos */
-@media (min-width: 992px) {
-  .lateral {
-    position: sticky;
-    top: 110px;   /* queda debajo del menú */
-  }
-}
-
-/* Lista de documentos */
-.lista-doc {
-  margin-top: 1.75rem;
-  padding: 1.25rem 1.4rem;
-  background: var(--blanco);
-  border: 1px solid #dfe6e1;
-  border-top: 5px solid var(--verde);
-  border-radius: 0.9rem;
-}
-
-.lista-doc h3 {
-  margin-bottom: 0.9rem;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--verde);
-}
-
-.lista-doc h3 i {
-  margin-right: 0.4rem;
-  color: var(--rojo);
-}
-
-.lista-doc ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.lista-doc li {
-  position: relative;
-  padding-left: 1.7rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Check verde delante de cada documento */
-.lista-doc li::before {
-  content: "\F26A";                 /* ícono "check-circle-fill" de Bootstrap Icons */
-  font-family: "bootstrap-icons";
-  position: absolute;
-  left: 0;
-  color: var(--verde);
-}
-
-/* Tarjeta de ayuda */
-.ayuda {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1.25rem;
-  padding: 1rem 1.25rem;
-  background: var(--verde);
-  color: var(--blanco);
-  border-radius: 0.9rem;
-}
-
-.ayuda i {
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.ayuda strong,
-.ayuda span {
+.titulo-seccion::after {
+  content: "";
   display: block;
-}
-
-.ayuda a {
-  color: var(--blanco);
-  font-weight: 700;
-}
-/* Lista numerada tipo línea de tiempo */
-/* ===== Pasos de admisión (tarjetas con número) ===== */
-.pasos {
-  list-style: none;
-  counter-reset: paso;
-  margin: 0;
-  padding: 0;
-}
-
-.pasos li {
-  counter-increment: paso;
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-/* Círculo con el número */
-.pasos li::before {
-  content: counter(paso);
-  flex: 0 0 56px;
   width: 56px;
-  height: 56px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--verde);
-  color: var(--blanco);
-  font-size: 1.7rem;
-  font-weight: 800;
-  z-index: 1;
-}
-
-/* Línea vertical que conecta un círculo con el siguiente */
-.pasos li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: 26px;
-  top: 56px;
-  bottom: -1.25rem;
-  width: 4px;
-  background: var(--verde);
-}
-
-/* Tarjeta de cada paso */
-.paso-card {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.25rem;
-  background: #e4f1e9;
-  border: 1px solid #cde5d6;
-  border-radius: 1rem;
-}
-
-.paso-ico {
-  flex-shrink: 0;
-  font-size: 2.4rem;
-  line-height: 1;
-  color: var(--verde);
-}
-
-.paso-card strong {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-size: 1.1rem;
-  color: var(--verde-oscuro);
-}
-
-.paso-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Último paso (matrícula) en rojo, como la meta */
-.pasos li:last-child::before {
+  height: 5px;
+  margin-top: 0.6rem;
   background: var(--rojo);
-}
-
-.pasos li:last-child .paso-card {
-  background: #fbe6ea;
-  border-color: #f3c3cc;
-}
-
-.pasos li:last-child .paso-ico {
-  color: var(--rojo);
-}
-
-.pasos li:last-child .paso-card strong {
-  color: var(--rojo-oscuro);
-}
-
-/* Celular: círculo más pequeño y sin íconos para ganar espacio */
-@media (max-width: 575.98px) {
-  .pasos li::before {
-    flex-basis: 44px;
-    width: 44px;
-    height: 44px;
-    font-size: 1.3rem;
-  }
-
-  .pasos li:not(:last-child)::after {
-    left: 20px;
-    top: 44px;
-  }
-
-  .paso-ico {
-    display: none;
-  }
-}
-/* ===== Documentos: filas horizontales ===== */
-.doc-card {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.8rem;
-  padding: 0.9rem 1.1rem;
-  background: #f6f8f7;
-  border: 1px solid #dfe6e1;
-  border-radius: 0.9rem;
-  color: var(--texto);
-  text-decoration: none;
-  overflow: hidden;
-  transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
-}
-
-/* Barra lateral verde a roja que baja al pasar el mouse */
-.doc-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 5px;
-  background: linear-gradient(180deg, var(--verde), var(--rojo));
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.3s;
-}
-
-.doc-card:hover,
-.doc-card:focus-visible {
-  transform: translateX(6px);
-  background: var(--blanco);
-  box-shadow: 0 10px 24px rgba(9, 72, 38, 0.14);
-  color: var(--texto);
-}
-
-.doc-card:hover::before,
-.doc-card:focus-visible::before {
-  transform: scaleY(1);
-}
-
-.doc-ico {
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  background: var(--rojo);
-  color: var(--blanco);
-  font-size: 1.4rem;
-}
-
-.doc-texto {
-  flex: 1;
-  min-width: 0;   /* permite que el texto largo se parta en líneas */
-}
-
-.doc-texto strong {
-  display: block;
-  font-size: 1rem;
-  line-height: 1.3;
-}
-
-.doc-texto small {
-  color: var(--verde);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.doc-flecha {
-  font-size: 1.4rem;
-  color: var(--rojo);
-  transition: transform 0.2s;
-}
-
-.doc-card:hover .doc-flecha {
-  transform: translateY(3px);
-}
-
-/* ===== Noticias ===== */
-.noticia {
-  display: flex;
-  margin-bottom: 1rem;
-  background: var(--blanco);
-  border: 1px solid #dfe6e1;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-
-.noticia:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(9, 72, 38, 0.15);
-}
-
-/* Cuadro de la foto; la imagen se coloca con <img> dentro */
-.noticia-img {
-  position: relative;
-  flex: 0 0 38%;
-  min-height: 170px;
-  background: var(--verde);   /* se ve si la imagen no carga */
-}
-
-.noticia-img img {
-  position: absolute;
-  inset: 0;                   /* ocupa todo el cuadro */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* recorta sin deformar */
-}
-
-.noticia-fecha {
-  position: absolute;
-  top: 0.7rem;
-  left: 0.7rem;
-  z-index: 1;                 /* queda encima de la foto */
-  padding: 0.2rem 0.65rem;
-  border-radius: 2rem;
-  background: var(--rojo);
-  color: var(--blanco);
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.noticia-cuerpo {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 1.2rem;
-}
-
-.noticia-cuerpo h3 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;      /* máximo 2 líneas, luego "..." */
-  overflow: hidden;
-  margin-bottom: 0.4rem;
-  font-size: 1.1rem;
-  font-weight: 800;
-  line-height: 1.3;
-  color: var(--verde);
-}
-
-.noticia-cuerpo p {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;      /* máximo 4 líneas, luego "..." */
-  overflow: hidden;
-  margin-bottom: 0.6rem;
-  font-size: 0.92rem;
-  color: #46564c;
-}
-
-.noticia-mas {
-  margin-top: auto;           /* pega "Leer más" al fondo de la tarjeta */
-  color: var(--rojo);
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.noticia-mas:hover {
-  color: var(--verde);
-}
-
-/* ===== Carrusel de noticias ===== */
-
-/* Todas las tarjetas del carrusel miden lo mismo, para que la página no "salte" */
-#carruselNoticias .noticia {
-  height: 250px;
-  margin-bottom: 0;
-}
-
-/* Espacio interno para que la sombra y la subida al pasar el mouse no se corten */
-#carruselNoticias .carousel-inner {
-  padding: 0.5rem 0.5rem 2rem;
-  margin: -0.5rem -0.5rem -1rem;
-}
-
-/* Barra de abajo: puntos a la izquierda, flechas a la derecha */
-.noticias-barra {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-/* Los puntos normalmente flotan sobre la foto; los dejamos en su lugar */
-.noticias-barra .carousel-indicators {
-  position: static;
-  justify-content: flex-start;
-  margin: 0;
-}
-
-.noticias-barra .carousel-indicators [data-bs-target] {
-  width: 28px;
-  height: 6px;
-  margin: 0 4px 0 0;
-  border: 0;
   border-radius: 3px;
-  background-color: #b9c9bf;
-  opacity: 1;
-  transition: width 0.3s, background-color 0.3s;
 }
 
-/* El punto activo es rojo y más largo */
-.noticias-barra .carousel-indicators .active {
-  width: 46px;
-  background-color: var(--rojo);
+/* Título de dos líneas (Documentos de / interés) */
+.titulo-doble {
+  text-transform: uppercase;
+  line-height: 1.15;
+  margin-bottom: 2rem;
 }
-
-/* Flechas redondas */
-.noticias-flechas {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.flecha {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border: 2px solid var(--verde);
-  border-radius: 50%;
-  background: var(--blanco);
-  color: var(--verde);
-  font-size: 1.1rem;
-  transition: background 0.2s, color 0.2s;
-}
-
-.flecha:hover {
-  background: var(--verde);
-  color: var(--blanco);
-}
-
-/* Celular: la foto pasa arriba y la altura se ajusta sola */
-@media (max-width: 575.98px) {
-  .noticia {
-    flex-direction: column;
-  }
-
-  .noticia-img {
-    flex: none;
-    height: 180px;
-  }
-
-  #carruselNoticias .noticia {
-    height: auto;
-  }
-}
-/* ===== Carrusel más grande: foto arriba, texto abajo ===== */
-#carruselNoticias .noticia {
-  flex-direction: column;
-  height: 440px;
-}
-
-#carruselNoticias .noticia-img {
-  flex: 0 0 56%;        /* la foto ocupa un poco más de la mitad */
-  min-height: 0;
-}
-
-#carruselNoticias .noticia-cuerpo {
-  flex: 1;
-  padding: 1.1rem 1.4rem;
-}
-
-#carruselNoticias .noticia-cuerpo h3 {
-  font-size: 1.3rem;
-}
-
-#carruselNoticias .noticia-cuerpo p {
-  -webkit-line-clamp: 3;   /* con la tarjeta en columna caben 3 líneas */
-}
-
-/* Celular: altura libre y foto de 220 px */
-@media (max-width: 575.98px) {
-  #carruselNoticias .noticia {
-    height: auto;
-  }
-
-  #carruselNoticias .noticia-img {
-    flex: none;
-    height: 220px;
-  }
-}
+.titulo-doble strong { display: block; font-weight: 800; }
+.titulo-doble span { display: block; font-weight: 300; color: #8a948e; }
 
 
-
-
-
-
-/* ===== Fondo claro reutilizable ===== */
-.fondo-claro { background: #f4f7f5; }
-
-/* ===== Cifras destacadas ===== */
-.cifras {
-  padding: 3rem 0;
-  background: linear-gradient(110deg, var(--verde), var(--verde-oscuro));
-  border-bottom: 5px solid var(--rojo);
-  color: var(--blanco);
-}
-.cifra-num { display: block; font-size: clamp(2.4rem, 5vw, 3.6rem); font-weight: 800; line-height: 1; }
-.cifra-txt { display: block; margin-top: 0.4rem; color: #cfe3d6; font-weight: 600; }
-
-/* ===== Campo laboral ===== */
-.campo {
-  height: 100%;
-  padding: 1.6rem;
-  background: var(--blanco);
-  border: 1px solid #dfe6e1;
-  border-radius: 1rem;
-  transition: transform 0.25s, box-shadow 0.25s;
-}
-.campo:hover { transform: translateY(-5px); box-shadow: 0 14px 28px rgba(9, 72, 38, 0.15); }
-.campo i {
-  display: grid; place-items: center;
-  width: 54px; height: 54px; margin-bottom: 1rem;
-  border-radius: 14px; background: var(--verde); color: var(--blanco); font-size: 1.6rem;
-}
-.campo:nth-child(even) i,
-.col-md-6:nth-child(even) .campo i { background: var(--rojo); }
-.campo h3 { font-size: 1.15rem; font-weight: 800; color: var(--verde); }
-.campo p { margin: 0; color: #46564c; }
-
-/* ===== Mapa ===== */
-.mapa {
-  display: block;
-  width: 100%;
-  height: 420px;          /* altura del mapa: cámbiala si lo quieres más alto */
-  border: 0;
-  border-radius: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-/* ===== Docentes ===== */
-.docente {
-  text-align: center;
-}
-
-/* Círculo de la foto */
-.docente .foto {
-  display: grid;
-  place-items: center;
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 1rem;
-  border-radius: 50%;
-  background: #e4f1e9;          /* se ve si la foto no carga */
-  color: var(--verde);
-  border: 4px solid var(--blanco);
-  outline: 3px solid var(--rojo);   /* aro rojo alrededor */
-  overflow: hidden;                 /* recorta la foto en círculo */
-  transition: transform 0.25s, outline-color 0.25s;
-}
-
-/* La foto llena el círculo sin deformarse */
-.docente .foto img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Al pasar el mouse, la foto crece un poco y el aro se vuelve verde */
-.docente:hover .foto {
-  transform: scale(1.06);
-  outline-color: var(--verde);
-}
-
-.docente h3 {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 800;
-}
-
-/* ===== Pie de página ===== */
-.pie {
-  padding: 4rem 0 1.5rem;
-  background: var(--verde-oscuro);
-  border-top: 6px solid var(--rojo);
-  color: #cfe3d6;
-}
-
-.pie-logo {
-  width: 260px;
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-.pie-texto {
-  max-width: 36ch;
-  margin: 0;
-  line-height: 1.6;
-}
-
-.pie-titulo {
-  position: relative;
-  margin-bottom: 1.4rem;
-  padding-bottom: 0.7rem;
-  font-size: 1.1rem;
-  font-weight: 800;
-  color: var(--blanco);
-}
-
-/* Barrita roja debajo de cada título */
-.pie-titulo::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 36px;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--rojo);
-}
-
-.pie-lista {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pie-lista li {
-  margin-bottom: 0.7rem;
-}
-
-.pie-lista i {
-  margin-right: 0.4rem;
-  color: #ff6b82;
-}
-
-.pie a {
-  color: #cfe3d6;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.pie a:hover {
-  color: var(--blanco);
-}
-
-/* Íconos de redes: círculos */
-.redes-iconos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.redes-iconos a {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 50%;
-  color: var(--blanco);
-  font-size: 1.1rem;
-  transition: background 0.2s, border-color 0.2s, transform 0.2s;
-}
-
-.redes-iconos a:hover {
-  background: var(--rojo);
-  border-color: var(--rojo);
-  transform: translateY(-3px);
-}
-
-/* Barra inferior */
-.pie-fin {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-top: 3rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.18);
-  font-size: 0.88rem;
-}
-
-/* ===== Botones ===== */
+/* ===== 3. BOTONES ===== */
 .btn-rojo {
   --bs-btn-color: var(--blanco);
   --bs-btn-bg: var(--rojo);
@@ -987,19 +75,6 @@
   --bs-btn-active-border-color: var(--rojo-oscuro);
 }
 
-/* Botón con borde blanco, para usar sobre fondo verde */
-.btn-blanco {
-  --bs-btn-color: var(--blanco);
-  --bs-btn-border-color: var(--blanco);
-  --bs-btn-hover-color: var(--verde);
-  --bs-btn-hover-bg: var(--blanco);
-  --bs-btn-hover-border-color: var(--blanco);
-  --bs-btn-active-color: var(--verde);
-  --bs-btn-active-bg: var(--blanco);
-  --bs-btn-active-border-color: var(--blanco);
-  border-width: 2px;
-  font-weight: 600;
-}
 .btn-borde-verde {
   --bs-btn-color: var(--verde);
   --bs-btn-border-color: var(--verde);
@@ -1011,4 +86,470 @@
   --bs-btn-active-border-color: var(--verde-oscuro);
   border-width: 2px;
   font-weight: 600;
+}
+
+
+/* ===== 4. MENÚ Y PORTADA ===== */
+.menu {
+  background: var(--blanco);
+  border-bottom: 4px solid var(--rojo);
+}
+.logo { height: 50px; }
+.navbar-brand { color: var(--verde); font-weight: 700; }
+.menu .nav-link { color: var(--texto); font-weight: 600; }
+.menu .nav-link:hover,
+.menu .nav-link.active { color: var(--rojo); }
+
+/* Menú sin hamburguesa: en celular es una fila que se desliza con el dedo */
+.menu-lista {
+  width: 100%;                       /* ocupa su propia línea debajo del logo */
+  flex-wrap: nowrap;                 /* los enlaces no saltan de línea */
+  overflow-x: auto;                  /* se desliza de lado si no caben */
+  scrollbar-width: none;             /* esconde la barra de desplazamiento */
+}
+.menu-lista .nav-link {
+  white-space: nowrap;               /* "Plan de estudios" no se parte en dos */
+  padding: 0.5rem 0.75rem;
+}
+
+/* Pantalla grande: los enlaces van a la derecha, en la misma línea del logo */
+@media (min-width: 1200px) {
+  .menu-lista { width: auto; margin-left: auto; overflow: visible; }
+}
+
+.portada-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ===== 5. SECCIONES ===== */
+
+/* --- Misión y Visión (pestañas) --- */
+.mv { margin-top: 1.75rem; max-width: 68ch; }
+.mv .nav-link { color: var(--texto); font-weight: 700; }
+.mv .nav-link:hover { color: var(--rojo); }
+.mv .nav-link.active {
+  color: var(--verde);
+  border-top: 3px solid var(--rojo);
+}
+.mv-contenido {
+  padding: 1.25rem 1.25rem 0.5rem;
+  background: var(--gris-claro);
+  border: 1px solid #cfd8d3;
+  border-top: 0;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+/* --- Lista de datos con íconos (también se usa en "Dónde estamos") --- */
+.datos {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--verde);
+  border-radius: 2rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+}
+.dato {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid #9aa7a0;
+}
+.dato:first-child { padding-top: 0; }
+.icono { font-size: 2.4rem; color: var(--verde); }
+.dato:nth-child(even) .icono { color: var(--rojo); }
+.dato strong { display: block; font-size: 1.25rem; font-weight: 800; }
+.dato span { color: #46564c; }
+
+/* --- Cifras destacadas --- */
+.cifras {
+  padding: 3rem 0;
+  color: var(--blanco);
+  background: linear-gradient(110deg, var(--verde), var(--verde-oscuro));
+  border-bottom: 5px solid var(--rojo);
+}
+.cifra-num { display: block; font-size: 3.2rem; font-weight: 800; line-height: 1; }
+.cifra-txt { display: block; margin-top: 0.4rem; color: #cfe3d6; font-weight: 600; }
+
+/* --- Plan de estudios (acordeón) --- */
+.accordion {
+  --bs-accordion-active-bg: #e4f1e9;
+  --bs-accordion-active-color: var(--verde);
+}
+.accordion-button { font-weight: 700; font-size: 1.1rem; }
+
+.cantidad {                                /* etiqueta "18 créditos" */
+  margin-left: 1rem;
+  padding: 0.15rem 0.7rem;
+  border-radius: 2rem;
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.materias { columns: 2; column-gap: 2rem; margin: 0; padding-left: 1.1rem; }
+.materias li { margin-bottom: 0.4rem; break-inside: avoid; }
+.materias li::marker { color: var(--rojo); }
+.cred { margin-left: 0.4rem; font-size: 0.8rem; font-weight: 600; color: var(--rojo-oscuro); white-space: nowrap; }
+
+/* --- Perfil del profesional --- */
+.perfil-caja { display: flex; align-items: flex-start; }
+.perfil-foto {                             /* foto cortada en diagonal */
+  flex: 0 0 45%;
+  min-height: 460px;
+  position: relative;
+  z-index: 2;
+  background: url("../Img/Perfil.jpeg") center / cover var(--verde);
+  clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+}
+.perfil-panel {
+  flex: 1;
+  margin-left: -8%;
+  margin-top: 3.5rem;
+  padding: 2.5rem 2.5rem 1.5rem calc(8% + 2.5rem);
+  background: #2d3330;
+  color: var(--blanco);
+  border-right: 10px solid var(--verde);
+}
+.perfil-lista { list-style: none; margin: 0; padding: 0; }
+.perfil-lista li { display: flex; gap: 1rem; margin-bottom: 1.25rem; }
+.perfil-lista i { font-size: 1.4rem; color: #ff6b82; }
+.perfil-lista p { margin: 0; line-height: 1.6; }
+
+/* --- Campo laboral --- */
+.campo {
+  height: 100%;
+  padding: 1.6rem;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+}
+.campo:hover { box-shadow: 0 10px 24px rgba(9, 72, 38, 0.15); }
+.campo i {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 1rem;
+  border-radius: 14px;
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 1.6rem;
+}
+.col-md-6:nth-child(even) .campo i { background: var(--rojo); }
+.campo h3 { font-size: 1.15rem; font-weight: 800; color: var(--verde); }
+.campo p { margin: 0; color: #46564c; }
+
+/* --- Docentes --- */
+.docente { text-align: center; }
+.docente .foto {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  border: 4px solid var(--blanco);
+  outline: 3px solid var(--rojo);
+  overflow: hidden;                        /* recorta la foto en círculo */
+}
+.docente .foto img { width: 100%; height: 100%; object-fit: cover; }
+.docente h3 { font-size: 1.05rem; font-weight: 800; }
+
+/* --- Admisiones --- */
+.botones { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+.lista-doc {
+  margin-top: 1.75rem;
+  padding: 1.25rem 1.4rem;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-top: 5px solid var(--verde);
+  border-radius: 0.9rem;
+}
+.lista-doc h3 { margin-bottom: 0.9rem; font-size: 1.1rem; font-weight: 800; color: var(--verde); }
+.lista-doc h3 i { color: var(--rojo); }
+.lista-doc ul { list-style: none; margin: 0; padding: 0; }
+.lista-doc li { margin-bottom: 0.5rem; padding-left: 1.7rem; position: relative; }
+.lista-doc li::before {                    /* el check verde */
+  content: "\F26A";
+  font-family: "bootstrap-icons";
+  position: absolute;
+  left: 0;
+  color: var(--verde);
+}
+
+.ayuda {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--verde);
+  color: var(--blanco);
+  border-radius: 0.9rem;
+}
+.ayuda i { font-size: 2rem; }
+.ayuda strong, .ayuda span { display: block; }
+.ayuda a { color: var(--blanco); font-weight: 700; }
+
+/* Pasos numerados: el número lo escribe el CSS con un contador */
+.pasos { list-style: none; counter-reset: paso; margin: 0; padding: 0; }
+.pasos li {
+  counter-increment: paso;
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.pasos li::before {                        /* círculo con el número */
+  content: counter(paso);
+  flex: 0 0 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--verde);
+  color: var(--blanco);
+  font-size: 1.7rem;
+  font-weight: 800;
+  z-index: 1;
+}
+.pasos li:not(:last-child)::after {        /* línea que une un círculo con el siguiente */
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: 56px;
+  bottom: -1.25rem;
+  width: 4px;
+  background: var(--verde);
+}
+.paso-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: #e4f1e9;
+  border: 1px solid #cde5d6;
+  border-radius: 1rem;
+}
+.paso-ico { font-size: 2.4rem; color: var(--verde); }
+.paso-card strong { display: block; margin-bottom: 0.3rem; font-size: 1.1rem; color: var(--verde-oscuro); }
+.paso-card p { margin: 0; font-size: 0.95rem; }
+
+/* El último paso va en rojo */
+.pasos li:last-child::before { background: var(--rojo); }
+.pasos li:last-child .paso-card { background: #fbe6ea; border-color: #f3c3cc; }
+.pasos li:last-child .paso-ico { color: var(--rojo); }
+.pasos li:last-child strong { color: var(--rojo-oscuro); }
+
+/* --- Documentos de interés --- */
+.doc-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--gris-claro);
+  border: 1px solid var(--borde);
+  border-radius: 0.9rem;
+  color: var(--texto);
+  text-decoration: none;
+}
+.doc-card:hover {
+  background: var(--blanco);
+  box-shadow: 0 10px 24px rgba(9, 72, 38, 0.14);
+  color: var(--texto);
+}
+.doc-ico {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--rojo);
+  color: var(--blanco);
+  font-size: 1.4rem;
+}
+.doc-texto { flex: 1; }
+.doc-texto strong { display: block; line-height: 1.3; }
+.doc-texto small { color: var(--verde); font-weight: 700; letter-spacing: 0.08em; }
+.doc-flecha { font-size: 1.4rem; color: var(--rojo); }
+
+/* Las carpetas de Drive van en verde */
+.carpeta .doc-ico { background: var(--verde); }
+.carpeta .doc-flecha { color: var(--verde); }
+
+/* --- Dónde estamos --- */
+.mapa {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border: 0;
+  border-radius: 1rem;
+}
+
+
+/* ===== 6. NOTICIAS (carrusel) ===== */
+.carousel-inner {                          /* espacio para que no se corte la sombra */
+  padding: 0.5rem 0.5rem 1rem;
+  margin: -0.5rem;
+}
+.noticia {
+  display: flex;
+  flex-direction: column;                  /* foto arriba, texto abajo */
+  height: 440px;
+  background: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.noticia-img {
+  position: relative;
+  flex: 0 0 56%;
+  background: var(--verde);
+}
+.noticia-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.noticia-fecha {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 2rem;
+  background: var(--rojo);
+  color: var(--blanco);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.noticia-cuerpo { flex: 1; display: flex; flex-direction: column; padding: 1.1rem 1.4rem; }
+.noticia-cuerpo h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--verde);
+  overflow: hidden;                        /* corta el texto largo con "..." */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.noticia-cuerpo p {
+  font-size: 0.92rem;
+  color: #46564c;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.noticia-mas { margin-top: auto; color: var(--rojo); font-weight: 700; text-decoration: none; }
+.noticia-mas:hover { color: var(--verde); }
+
+/* Puntos y flechas del carrusel */
+.noticias-barra { display: flex; align-items: center; justify-content: space-between; margin-top: 0.5rem; }
+.noticias-barra .carousel-indicators { position: static; margin: 0; }
+.noticias-barra .carousel-indicators [data-bs-target] {
+  width: 28px;
+  height: 6px;
+  border: 0;
+  border-radius: 3px;
+  background-color: #b9c9bf;
+  opacity: 1;
+}
+.noticias-barra .carousel-indicators .active { width: 46px; background-color: var(--rojo); }
+
+.noticias-flechas { display: flex; gap: 0.5rem; }
+.flecha {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--verde);
+  border-radius: 50%;
+  background: var(--blanco);
+  color: var(--verde);
+}
+.flecha:hover { background: var(--verde); color: var(--blanco); }
+
+
+/* ===== 7. PIE DE PÁGINA ===== */
+.pie {
+  padding: 4rem 0 1.5rem;
+  background: var(--verde-oscuro);
+  border-top: 6px solid var(--rojo);
+  color: #cfe3d6;
+}
+.pie a { color: #cfe3d6; text-decoration: none; }
+.pie a:hover { color: var(--blanco); }
+.pie-logo { width: 260px; max-width: 100%; margin-bottom: 1rem; }
+.pie-texto { max-width: 36ch; margin: 0; }
+.pie-titulo {
+  margin-bottom: 1.4rem;
+  padding-bottom: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--blanco);
+  border-bottom: 4px solid var(--rojo);    /* barrita roja debajo del título */
+  display: inline-block;
+}
+.pie-lista { list-style: none; margin: 0; padding: 0; }
+.pie-lista li { margin-bottom: 0.7rem; }
+.pie-lista i { margin-right: 0.4rem; color: #ff6b82; }
+
+.redes-iconos { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.redes-iconos a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: var(--blanco);
+}
+.redes-iconos a:hover { background: var(--rojo); border-color: var(--rojo); }
+
+.pie-fin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.88rem;
+}
+
+
+/* ===== 8. ADAPTACIÓN A TABLET Y CELULAR ===== */
+
+/* Solo en pantalla grande: la columna de admisiones se queda fija al bajar */
+@media (min-width: 992px) {
+  .lateral { position: sticky; top: 110px; }
+}
+
+/* Tablet y celular */
+@media (max-width: 991.98px) {
+  .perfil-caja { flex-direction: column; }
+  .perfil-foto { width: 100%; flex: none; min-height: 260px; clip-path: none; }
+  .perfil-panel { margin: 0; padding: 1.5rem; }
+}
+
+/* Celular */
+@media (max-width: 767.98px) {
+  .seccion { padding: 3.5rem 0; }
+  .portada-img { height: 190px; object-fit: cover; object-position: 51% center; }
+  .botones { flex-direction: column; }
+  .botones .btn { width: 100%; }           /* los dos botones del mismo ancho */
+  .materias { columns: 1; }
+  .paso-ico { display: none; }
+  .pasos li::before { flex-basis: 44px; height: 44px; font-size: 1.3rem; }
+  .pasos li:not(:last-child)::after { left: 20px; top: 44px; }
+  .noticia { height: auto; }
+  .noticia-img { flex: none; height: 220px; }
 }
