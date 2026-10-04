@@ -593,7 +593,7 @@
   box-shadow: 0 14px 28px rgba(9, 72, 38, 0.15);
 }
 
-/* La foto viene de la variable --foto que se escribe en el HTML */
+/* Cuadro de la foto; la imagen se coloca con <img> dentro */
 .noticia-img {
   position: relative;
   flex: 0 0 38%;
@@ -613,6 +613,7 @@
   position: absolute;
   top: 0.7rem;
   left: 0.7rem;
+  z-index: 1;                 /* queda encima de la foto */
   padding: 0.2rem 0.65rem;
   border-radius: 2rem;
   background: var(--rojo);
@@ -628,6 +629,10 @@
 }
 
 .noticia-cuerpo h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;      /* máximo 2 líneas, luego "..." */
+  overflow: hidden;
   margin-bottom: 0.4rem;
   font-size: 1.1rem;
   font-weight: 800;
@@ -636,13 +641,17 @@
 }
 
 .noticia-cuerpo p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;      /* máximo 4 líneas, luego "..." */
+  overflow: hidden;
   margin-bottom: 0.6rem;
   font-size: 0.92rem;
   color: #46564c;
 }
 
 .noticia-mas {
-  margin-top: auto;   /* pega "Leer más" al fondo de la tarjeta */
+  margin-top: auto;           /* pega "Leer más" al fondo de la tarjeta */
   color: var(--rojo);
   font-weight: 700;
   text-decoration: none;
@@ -652,7 +661,77 @@
   color: var(--verde);
 }
 
-/* Celular: la foto pasa arriba */
+/* ===== Carrusel de noticias ===== */
+
+/* Todas las tarjetas del carrusel miden lo mismo, para que la página no "salte" */
+#carruselNoticias .noticia {
+  height: 250px;
+  margin-bottom: 0;
+}
+
+/* Espacio interno para que la sombra y la subida al pasar el mouse no se corten */
+#carruselNoticias .carousel-inner {
+  padding: 0.5rem 0.5rem 2rem;
+  margin: -0.5rem -0.5rem -1rem;
+}
+
+/* Barra de abajo: puntos a la izquierda, flechas a la derecha */
+.noticias-barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Los puntos normalmente flotan sobre la foto; los dejamos en su lugar */
+.noticias-barra .carousel-indicators {
+  position: static;
+  justify-content: flex-start;
+  margin: 0;
+}
+
+.noticias-barra .carousel-indicators [data-bs-target] {
+  width: 28px;
+  height: 6px;
+  margin: 0 4px 0 0;
+  border: 0;
+  border-radius: 3px;
+  background-color: #b9c9bf;
+  opacity: 1;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+/* El punto activo es rojo y más largo */
+.noticias-barra .carousel-indicators .active {
+  width: 46px;
+  background-color: var(--rojo);
+}
+
+/* Flechas redondas */
+.noticias-flechas {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.flecha {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--verde);
+  border-radius: 50%;
+  background: var(--blanco);
+  color: var(--verde);
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.flecha:hover {
+  background: var(--verde);
+  color: var(--blanco);
+}
+
+/* Celular: la foto pasa arriba y la altura se ajusta sola */
 @media (max-width: 575.98px) {
   .noticia {
     flex-direction: column;
@@ -661,6 +740,45 @@
   .noticia-img {
     flex: none;
     height: 180px;
+  }
+
+  #carruselNoticias .noticia {
+    height: auto;
+  }
+}
+/* ===== Carrusel más grande: foto arriba, texto abajo ===== */
+#carruselNoticias .noticia {
+  flex-direction: column;
+  height: 440px;
+}
+
+#carruselNoticias .noticia-img {
+  flex: 0 0 56%;        /* la foto ocupa un poco más de la mitad */
+  min-height: 0;
+}
+
+#carruselNoticias .noticia-cuerpo {
+  flex: 1;
+  padding: 1.1rem 1.4rem;
+}
+
+#carruselNoticias .noticia-cuerpo h3 {
+  font-size: 1.3rem;
+}
+
+#carruselNoticias .noticia-cuerpo p {
+  -webkit-line-clamp: 3;   /* con la tarjeta en columna caben 3 líneas */
+}
+
+/* Celular: altura libre y foto de 220 px */
+@media (max-width: 575.98px) {
+  #carruselNoticias .noticia {
+    height: auto;
+  }
+
+  #carruselNoticias .noticia-img {
+    flex: none;
+    height: 220px;
   }
 }
 
