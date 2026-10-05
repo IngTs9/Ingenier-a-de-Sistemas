@@ -99,7 +99,7 @@ html { scroll-behavior: smooth; }
   white-space: nowrap;
   padding: 0.5rem 0.75rem;
 }
-
+.marca-texto { color: inherit; text-decoration: none; }
 
 /* ===== PORTADA ===== */
 .portada-img {
@@ -118,7 +118,7 @@ html { scroll-behavior: smooth; }
   border-top: 3px solid var(--rojo);
 }
 .mv-contenido {
-  padding: 1.25rem 1.25rem 0.5rem;
+  padding: 1.25rem 1.25rem 0rem;
   background: var(--gris-claro);
   border: 1px solid #cfd8d3;
   border-top: 0;
@@ -734,4 +734,14 @@ html { scroll-behavior: smooth; }
     scroll-behavior: auto !important;
   }
   .cifra-num { counter-reset: num var(--meta) !important; }
+}
+@media (min-width: 992px) {
+  .menu .container { flex-wrap: nowrap; }
+  .navbar-brand { white-space: nowrap; margin-right: 1rem; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .menu .container { max-width: none; padding-inline: 1.25rem; }
+  .menu-lista .nav-link { font-size: 0.9rem; padding: 0.5rem 0.5rem; }
+  .menu .nav-link::after { left: 0.5rem; right: 0.5rem; }
+  .logo { height: 44px; }
 }
