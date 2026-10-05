@@ -1,12 +1,4 @@
-/* =========================================================
-   ESTILOS - Ingeniería de Sistemas, Universidad de la Amazonia
-   Orden: 1 Colores · 2 Generales · 3 Botones · 4 Menú y portada
-          5 Secciones · 6 Noticias · 7 Pie de página · 8 Celular
-   ========================================================= */
-
-
-/* ===== 1. COLORES =====
-   Si cambias un color aquí, cambia en toda la página. */
+/* =====COLORES ===== */
 :root {
   --verde: #0f6b3a;
   --verde-oscuro: #094826;
@@ -17,18 +9,15 @@
   --gris-claro: #f4f7f5;
   --borde: #dfe6e1;
 
-  /* Así Bootstrap usa nuestros colores */
   --bs-body-color: var(--texto);
   --bs-link-color: var(--verde);
   --bs-link-hover-color: var(--rojo);
 }
 
-
-/* ===== 2. GENERALES ===== */
-html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
-[id] { scroll-margin-top: 90px; }          /* el menú fijo no tapa los títulos */
-
-.seccion { padding: 5rem 0; }              /* espacio arriba y abajo de cada sección */
+/* ===== GENERALES ===== */
+html { scroll-behavior: smooth; }         
+[id] { scroll-margin-top: 90px; }          
+.seccion { padding: 5rem 0; }              
 .fondo-claro,
 .plan,
 .admisiones { background: var(--gris-claro); }
@@ -52,7 +41,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
   border-radius: 3px;
 }
 
-/* Título de dos líneas (Documentos de / interés) */
+/* Título de dos líneas  */
 .titulo-doble {
   text-transform: uppercase;
   line-height: 1.15;
@@ -62,7 +51,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 .titulo-doble span { display: block; font-weight: 300; color: #8a948e; }
 
 
-/* ===== 3. BOTONES ===== */
+/* =====  BOTONES ===== */
 .btn-rojo {
   --bs-btn-color: var(--blanco);
   --bs-btn-bg: var(--rojo);
@@ -89,7 +78,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 }
 
 
-/* ===== 4. MENÚ Y PORTADA ===== */
+/* =====  MENÚ Y PORTADA ===== */
 .menu {
   background: var(--blanco);
   border-bottom: 4px solid var(--rojo);
@@ -100,7 +89,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 .menu .nav-link:hover,
 .menu .nav-link.active { color: var(--rojo); }
 
-/* Menú sin hamburguesa: en celular es una fila que se desliza con el dedo */
+/* Menú */
 .menu-lista {
   width: 100%;                       /* ocupa su propia línea debajo del logo */
   flex-wrap: nowrap;                 /* los enlaces no saltan de línea */
@@ -112,7 +101,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
   padding: 0.5rem 0.75rem;
 }
 
-/* Pantalla grande: los enlaces van a la derecha, en la misma línea del logo */
+/* Pantalla grande */
 @media (min-width: 1200px) {
   .menu-lista { width: auto; margin-left: auto; overflow: visible; }
 }
@@ -124,9 +113,9 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 }
 
 
-/* ===== 5. SECCIONES ===== */
+/* ===== SECCIONES ===== */
 
-/* --- Misión y Visión (pestañas) --- */
+/* --- Misión y Visión --- */
 .mv { margin-top: 1.75rem; max-width: 68ch; }
 .mv .nav-link { color: var(--texto); font-weight: 700; }
 .mv .nav-link:hover { color: var(--rojo); }
@@ -142,7 +131,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
   border-radius: 0 0 0.75rem 0.75rem;
 }
 
-/* --- Lista de datos con íconos (también se usa en "Dónde estamos") --- */
+/* --- Lista de datos  --- */
 .datos {
   list-style: none;
   margin: 3rem 0;
@@ -174,14 +163,14 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 .cifra-num { display: block; font-size: 3.2rem; font-weight: 800; line-height: 1; }
 .cifra-txt { display: block; margin-top: 0.4rem; color: #cfe3d6; font-weight: 600; }
 
-/* --- Plan de estudios (acordeón) --- */
+/* --- Plan de estudios --- */
 .accordion {
   --bs-accordion-active-bg: #e4f1e9;
   --bs-accordion-active-color: var(--verde);
 }
 .accordion-button { font-weight: 700; font-size: 1.1rem; }
 
-.cantidad {                                /* etiqueta "18 créditos" */
+.cantidad {                           
   margin-left: 1rem;
   padding: 0.15rem 0.7rem;
   border-radius: 2rem;
@@ -253,7 +242,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
   border-radius: 50%;
   border: 4px solid var(--blanco);
   outline: 3px solid var(--rojo);
-  overflow: hidden;                        /* recorta la foto en círculo */
+  overflow: hidden;                       
 }
 .docente .foto img { width: 100%; height: 100%; object-fit: cover; }
 .docente h3 { font-size: 1.05rem; font-weight: 800; }
@@ -273,7 +262,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 .lista-doc h3 i { color: var(--rojo); }
 .lista-doc ul { list-style: none; margin: 0; padding: 0; }
 .lista-doc li { margin-bottom: 0.5rem; padding-left: 1.7rem; position: relative; }
-.lista-doc li::before {                    /* el check verde */
+.lista-doc li::before {                   
   content: "\F26A";
   font-family: "bootstrap-icons";
   position: absolute;
@@ -295,7 +284,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 .ayuda strong, .ayuda span { display: block; }
 .ayuda a { color: var(--blanco); font-weight: 700; }
 
-/* Pasos numerados: el número lo escribe el CSS con un contador */
+/* Pasos numerados */
 .pasos { list-style: none; counter-reset: paso; margin: 0; padding: 0; }
 .pasos li {
   counter-increment: paso;
@@ -304,7 +293,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
   gap: 1rem;
   margin-bottom: 1.25rem;
 }
-.pasos li::before {                        /* círculo con el número */
+.pasos li::before {                       
   content: counter(paso);
   flex: 0 0 56px;
   height: 56px;
@@ -317,7 +306,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
   font-weight: 800;
   z-index: 1;
 }
-.pasos li:not(:last-child)::after {        /* línea que une un círculo con el siguiente */
+.pasos li:not(:last-child)::after {       
   content: "";
   position: absolute;
   left: 26px;
@@ -340,7 +329,6 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 .paso-card strong { display: block; margin-bottom: 0.3rem; font-size: 1.1rem; color: var(--verde-oscuro); }
 .paso-card p { margin: 0; font-size: 0.95rem; }
 
-/* El último paso va en rojo */
 .pasos li:last-child::before { background: var(--rojo); }
 .pasos li:last-child .paso-card { background: #fbe6ea; border-color: #f3c3cc; }
 .pasos li:last-child .paso-ico { color: var(--rojo); }
@@ -395,13 +383,13 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 
 
 /* ===== 6. NOTICIAS (carrusel) ===== */
-.carousel-inner {                          /* espacio para que no se corte la sombra */
+.carousel-inner {                         
   padding: 0.5rem 0.5rem 1rem;
   margin: -0.5rem;
 }
 .noticia {
   display: flex;
-  flex-direction: column;                  /* foto arriba, texto abajo */
+  flex-direction: column;                
   height: 440px;
   background: var(--blanco);
   border: 1px solid var(--borde);
@@ -437,7 +425,7 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
   font-size: 1.3rem;
   font-weight: 800;
   color: var(--verde);
-  overflow: hidden;                        /* corta el texto largo con "..." */
+  overflow: hidden;                      
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -495,11 +483,11 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
   font-size: 1.1rem;
   font-weight: 800;
   color: var(--blanco);
-  border-bottom: 4px solid var(--rojo);    /* barrita roja debajo del título */
+  border-bottom: 4px solid var(--rojo);    
   display: inline-block;
 }
 .pie-lista { list-style: none; margin: 0; padding: 0; }
-.pie-lista li { margin-bottom: 0.7rem; }
+.pie-lista li { margin-bottom: 0.7rem;overflow-wrap: anywhere; }
 .pie-lista i { margin-right: 0.4rem; color: #ff6b82; }
 
 .redes-iconos { display: flex; flex-wrap: wrap; gap: 0.6rem; }
@@ -528,7 +516,6 @@ html { scroll-behavior: smooth; }          /* baja suave al pulsar un enlace */
 
 /* ===== 8. ADAPTACIÓN A TABLET Y CELULAR ===== */
 
-/* Solo en pantalla grande: la columna de admisiones se queda fija al bajar */
 @media (min-width: 992px) {
   .lateral { position: sticky; top: 110px; }
 }
